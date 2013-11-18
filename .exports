@@ -1,5 +1,10 @@
-# Let stuff be installed via brew be before the system stuff
+# Let stuff installed via brew be before the system stuff
 export PATH="/usr/local/bin:$PATH"
 
 # Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# SBT JVM-Options
+export SBT_OPTS="-XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:PermSize=256M -XX:MaxPermSize=512M"
+
+export EDITOR=vi

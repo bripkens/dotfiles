@@ -1,4 +1,7 @@
+#!/usr/bin/env bash
 
-# Link .bashrc
-rm ~/.bashrc
-ln -s ~/dotfiles/.bashrc ~/.bashrc
+# Link necessary files
+for file in .{bashrc,gitconfig}; do
+	rm -f "$HOME/$file"
+	ln -s "$HOME/dotfiles/$file" "$HOME/$file"
+done

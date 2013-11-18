@@ -3,3 +3,61 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
+
+# svn aliases
+alias svni='svn propset svn:ignore -F "/home/ben/.svnignore" -R .'
+alias svnc='svn commit -m'
+alias svns='svn status'
+alias svna='svn add'
+alias svnan='svn add -N'
+alias svnu='svn update'
+alias svnd='svn delete'
+alias svnrevert=svn_revert
+
+# hg aliases
+alias hgc='hg commit -m'
+alias hgs='hg status'
+alias hgp='hg push'
+alias hgu='hg pull'
+alias hga='hg add'
+alias hgd='hg remove'
+alias hgr='hg remove'
+# Copy the name of the current branch to the clipboard 
+alias hgb="hg branch | \
+           tr -d '\n' | \
+           xclip -selection clipboard && \
+           hg branch"
+
+# Show all branches in a more readable way
+alias hgbs="hg branches | \
+            column -t | \
+            sort"
+
+# Same as hgbs, but additionally shows closed branches
+alias hgbsc="hg branches -c | \
+             column -t | \
+             sort"
+
+# Copy branch/changeset information to the clipboard.
+# Useful when referring to commits
+alias hglc="hg log -l 1 | \
+            grep -1 changeset | \
+            xclip -selection clipboard"
+
+# See what I have worked on the last few days
+alias hgla="hg log -a 'Ben Ripnes' | less"
+
+#git aliases
+alias gitco='git checkout'
+alias gitc='git commit -m'
+alias gits='git status'
+alias gita='git add'
+alias gitau='git add . && git add -u && echo "Added all changes" && git status'
+alias gitm='git merge'
+alias gitd='git diff'
+alias gitr='git rm'
+alias gitb='git branch'
+alias gitl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit"
+
+# SSH aliases
+alias ctv='ssh bripkens.de -p 46812'
