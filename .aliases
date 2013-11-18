@@ -82,7 +82,7 @@ alias gitco='git checkout'
 alias gitc='git commit -m'
 alias gits='git status'
 alias gita='git add'
-alias gitau='git add . && git add -u && echo "Added all changes" && git status'
+alias gitau='git add . && git add -u :/ && echo "Added all changes" && git status'
 alias gitm='git merge'
 alias gitd='git diff'
 alias gitr='git rm'
@@ -91,3 +91,6 @@ alias gitl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset
 
 # SSH aliases
 alias ctv='ssh bripkens.de -p 46812'
+
+# Sublime Text
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
