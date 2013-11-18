@@ -43,7 +43,6 @@ alias svna='svn add'
 alias svnan='svn add -N'
 alias svnu='svn update'
 alias svnd='svn delete'
-alias svnrevert=svn_revert
 
 # hg aliases
 alias hgc='hg commit -m'
