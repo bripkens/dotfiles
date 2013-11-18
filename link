@@ -5,3 +5,5 @@ for file in .{bashrc,gitconfig}; do
 	rm -f "$HOME/$file"
 	ln -s "$HOME/.dotfiles/$file" "$HOME/$file"
 done
+
+ln -s "$HOME/.dotfiles/.bashrc" "$HOME/.bash_profile"
