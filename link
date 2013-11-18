@@ -1,0 +1,4 @@
+
+# Link .bashrc
+rm ~/.bashrc
+ln -s ~/dotfiles/.bashrc ~/.bashrc
