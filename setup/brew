@@ -12,7 +12,7 @@ brew update
 brew upgrade
  
 # Install command line tools
-brew install ack curl autoconf automake wget bash leiningen ncdu tmux tree gibo git mercurial vim maven
+brew install ack curl autoconf automake wget bash leiningen ncdu tmux tree gibo git mercurial vim maven terminal-notifier
  
 brew tap phinze/homebrew-cask
 brew install brew-cask

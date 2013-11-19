@@ -47,11 +47,8 @@ alias svnd='svn delete'
 # hg aliases
 alias hgc='hg commit -m'
 alias hgs='hg status'
-alias hgp='hg push'
-alias hgu='hg pull'
 alias hga='hg add'
-alias hgd='hg remove'
-alias hgr='hg remove'
+alias hgau='hg addremove'
 # Copy the name of the current branch to the clipboard 
 alias hgb="hg branch | \
            tr -d '\n' | \
@@ -75,7 +72,7 @@ alias hglc="hg log -l 1 | \
             xclip -selection clipboard"
 
 # See what I have worked on the last few days
-alias hgla="hg log -a 'Ben Ripkens' | less"
+alias hgla="hg log -u 'Ben Ripkens' | less"
 
 #git aliases
 alias gitco='git checkout'
@@ -94,3 +91,6 @@ alias ctv='ssh bripkens.de -p 46812'
 
 # Sublime Text
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+
+# ICIS+ HSQL
+alias hsql="$ICISPLUS_REPO/parent/StartAndInitHSQL.bash"

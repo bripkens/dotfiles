@@ -7,4 +7,11 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # SBT JVM-Options
 export SBT_OPTS="-XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:PermSize=256M -XX:MaxPermSize=512M"
 
+# Default Editor
 export EDITOR=vi
+
+# Maven configuration
+export M2_REPO="$HOME/.m2/repository"
+
+# ICIS+ configuration
+export ICISPLUS_REPO="$HOME/projects/icisplus/repository"
