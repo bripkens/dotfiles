@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# make sure that address resolution for bripkens works
+sudo sh -c 'echo "127.0.0.1    bripkens\n" >> /etc/hosts'

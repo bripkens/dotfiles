@@ -93,5 +93,6 @@ alias ctv='ssh bripkens.de -p 46812'
 # Sublime Text
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
-# ICIS+ HSQL
+# ICIS+
 alias hsql="$ICISPLUS_REPO/parent/StartAndInitHSQL.bash"
+alias icisplus="cd $ICISPLUS_REPO"
