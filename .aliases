@@ -36,7 +36,7 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
 # svn aliases
-alias svni='svn propset svn:ignore -F "/home/ben/.svnignore" -R .'
+alias svni='svn propset svn:ignore -F "/.svnignore" -R .'
 alias svnc='svn commit -m'
 alias svns='svn status'
 alias svna='svn add'
@@ -75,7 +75,7 @@ alias hglc="hg log -l 1 | \
             xclip -selection clipboard"
 
 # See what I have worked on the last few days
-alias hgla="hg log -a 'Ben Ripnes' | less"
+alias hgla="hg log -a 'Ben Ripkens' | less"
 
 #git aliases
 alias gitco='git checkout'

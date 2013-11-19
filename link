@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
 # Link necessary files
-for file in .{bashrc,gitconfig}; do
+for file in .{bashrc,gitconfig,hgrc}; do
 	rm -f "$HOME/$file"
 	ln -s "$HOME/.dotfiles/$file" "$HOME/$file"
 done
 
+rm -f "$HOME/.bash_profile"
 ln -s "$HOME/.dotfiles/.bashrc" "$HOME/.bash_profile"
