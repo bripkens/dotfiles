@@ -2,18 +2,42 @@
 
 # Install brew
 ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
- 
-# Check that your path is setup correctly etc.
-# TODO stop if brew detects problems
-brew doctor
+
+# Temporarily add brew's bin directory to the path so that
+# this problem will not be reported by brew doctor.
+export PATH="/usr/local/bin:$PATH"
  
 # Make sure brew is up to date
 brew update
 brew upgrade
+
+# Check that everything is ok with the system config
+brew doctor
+if [[ $? -gt 0 ]]; then
+	echo "Please make sure that there are no brew problems."
+	exit 1
+fi
  
 # Install command line tools
-brew install ack curl autoconf automake wget bash leiningen ncdu tmux tree gibo git mercurial vim maven terminal-notifier
- 
+brew install ack \
+			 autoconf \
+			 automake \
+			 bash \
+			 curl \
+			 gibo \
+			 git \
+			 leiningen \
+			 maven \
+			 mercurial \
+			 ncdu \
+			 sbt \
+			 terminal-notifier \
+			 tmux \
+			 tree \
+			 vim \
+			 wget
+
+# Install cask so that we can install standard apps
 brew tap phinze/homebrew-cask
 brew install brew-cask
  
@@ -57,5 +81,6 @@ installcask gmail-notifr
 installcask vagrant
 installcask tor-browser
 installcask steam
+installcask hipchat
  
 brew cleanup

@@ -96,3 +96,7 @@ alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 # ICIS+
 alias hsql="$ICISPLUS_REPO/parent/StartAndInitHSQL.bash"
 alias icisplus="cd $ICISPLUS_REPO"
+
+# Dev tools
+alias server="open http://localhost:8000/ && python -m SimpleHTTPServer"
+alias canaryunsafe="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --disable-web-security"
