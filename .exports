@@ -3,7 +3,7 @@
 # Let stuff installed via brew be before the system stuff
 export PATH="/usr/local/bin:$PATH"
 
-# Added by the Heroku Toolbelt
+# Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
 # SBT JVM-Options
@@ -14,6 +14,7 @@ export EDITOR=vim
 
 # Maven configuration
 export M2_REPO="$HOME/.m2/repository"
+export M2_HOME=$(stat -f "%N" /usr/local/Cellar/maven/*)
 
 # ICIS+ configuration
 export ICISPLUS_REPO="$HOME/projects/icisplus/repository"

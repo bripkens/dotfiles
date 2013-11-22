@@ -96,6 +96,7 @@ alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 # ICIS+
 alias hsql="$ICISPLUS_REPO/parent/StartAndInitHSQL.bash"
 alias icisplus="cd $ICISPLUS_REPO"
+alias checkz4="ping 172.19.2.24"
 
 # Dev tools
 alias server="open http://localhost:8000/ && python -m SimpleHTTPServer"

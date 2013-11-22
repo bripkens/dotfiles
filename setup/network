@@ -2,3 +2,6 @@
 
 # make sure that address resolution for bripkens works
 sudo sh -c 'echo "127.0.0.1    bripkens\n" >> /etc/hosts'
+
+# route laboratory traffic through the company gateway
+sudo route -n add 172.30.0.0/24 10.10.10.4
