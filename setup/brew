@@ -20,16 +20,19 @@ fi
  
 # Install command line tools
 brew install ack \
+			 ant \
 			 autoconf \
 			 automake \
 			 bash \
 			 curl \
 			 gibo \
 			 git \
+			 ivy \
 			 leiningen \
 			 maven \
 			 mercurial \
 			 ncdu \
+			 python \
 			 sbt \
 			 terminal-notifier \
 			 tmux \

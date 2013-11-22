@@ -14,7 +14,9 @@ export EDITOR=vim
 
 # Maven configuration
 export M2_REPO="$HOME/.m2/repository"
-export M2_HOME=$(stat -f "%N" /usr/local/Cellar/maven/*)
+
+# JAVA_HOME for Oracle's JDK
+export JAVA_HOME=$(stat -f "%N" /Library/Java/JavaVirtualMachines/*/Contents/Home/)
 
 # ICIS+ configuration
 export ICISPLUS_REPO="$HOME/projects/icisplus/repository"
