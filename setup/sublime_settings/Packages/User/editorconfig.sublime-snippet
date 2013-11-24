@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+root = true
+
+[*]
+end_of_line = lf
+insert_final_newline = true
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true
+charset = utf-8
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!--<tabTrigger>conf</tabTrigger>-->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!--<scope>source.editorconfig</scope>-->
+</snippet>

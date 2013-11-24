@@ -1,0 +1,106 @@
+[{
+        "keys": ["super+e"],
+        "command": "run_macro_file",
+        "args": {
+            "file": "res://Packages/Default/Delete Line.sublime-macro"
+        }
+    }, {
+        "keys": ["ctrl+shift+tab"],
+        "command": "prev_view"
+    }, {
+        "keys": ["ctrl+tab"],
+        "command": "next_view"
+    }, {
+        "keys": ["super+b"],
+        "command": "toggle_side_bar"
+    }, {
+        "keys": ["super+shift+c"],
+        "command": "toggle_comment",
+        "args": {
+            "block": false
+        }
+    }, {
+        "keys": ["super+h"],
+        "command": "show_panel",
+        "args": {
+            "panel": "replace",
+            "reverse": false
+        }
+    },
+
+
+    // SublimeREPL bindings:
+    // =====================
+    {
+        "keys": ["alt+super+b"],
+        "command": "repl_transfer_current",
+        "args": {
+            "scope": "block"
+        }
+    }, {
+        "keys": ["alt+super+r"],
+        "command": "refresh_namespaces_in_repl"
+    }, {
+        "keys": ["alt+super+i"],
+        "command": "switch_to_current_namespace_in_repl"
+    }, {
+        "keys": ["alt+super+x"],
+        "command": "run_clojure_tests_from_current_namespace_in_repl"
+    }, {
+        "keys": ["alt+super+a"],
+        "command": "run_all_clojure_tests_from_project_in_repl"
+    },
+
+
+    // BracketHighlighter bindings:
+    // ===========================
+    // Swap bracket type
+    {
+        "keys": ["super+shift+7"],
+        "command": "swap_brackets"
+    },
+
+    // Swap quotes (only goes boths ways in supported languages...)
+    {
+        "keys": ["super+shift+2"],
+        "command": "bh_key",
+        "args": {
+            "lines": true,
+            "plugin": {
+                "type": ["single_quote", "double_quote", "py_single_quote", "py_double_quote"],
+                "command": "bh_modules.swapquotes"
+            }
+        }
+    },
+
+    // Select text between brackets
+    {
+        "keys": ["super+shift+a"],
+        "command": "bh_key",
+        "args": {
+            "lines": true,
+            "plugin": {
+                "type": ["__all__"],
+                "command": "bh_modules.bracketselect"
+            }
+        }
+    },
+
+    // Select tag name of HTML/XML tag (both opening name and closing)
+    {
+        "keys": ["super+shift+t"],
+        "command": "bh_key",
+        "args": {
+            "plugin": {
+                "type": ["cfml", "html", "angle"],
+                "command": "bh_modules.tagnameselect"
+            }
+        }
+    },
+
+    // Toggle high visibility mode
+    {
+        "keys": ["super+shift+8"],
+        "command": "bh_toggle_high_visibility"
+    },
+]
