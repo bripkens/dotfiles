@@ -1,10 +1,16 @@
 #!/usr/bin/env bash
 
+link() {
+  from="$HOME/.dotfiles/$1"
+  to="$HOME/$2"
+  echo "New symlink $to -> $from"
+  rm -f $to
+  ln -s $from $to
+}
+
 # Link necessary files
 for file in .{bashrc,gitconfig,hgrc}; do
-	rm -f "$HOME/$file"
-	ln -s "$HOME/.dotfiles/$file" "$HOME/$file"
+	link $file $file
 done
 
-rm -f "$HOME/.bash_profile"
-ln -s "$HOME/.dotfiles/.bashrc" "$HOME/.bash_profile"
+link ".bashrc" ".bash_profile"

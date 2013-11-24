@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 # Install NVM
 curl https://raw.github.com/creationix/nvm/master/install.sh | sh
 

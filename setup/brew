@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 # Install brew
 ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 
@@ -13,10 +15,6 @@ brew upgrade
 
 # Check that everything is ok with the system config
 brew doctor
-if [[ $? -gt 0 ]]; then
-	echo "Please make sure that there are no brew problems."
-	exit 1
-fi
  
 # Install command line tools
 brew install ack \
@@ -80,7 +78,6 @@ installcask heroku-toolbelt
 installcask balsamiq-mockups
 installcask xmind
 installcask gimp
-installcask gmail-notifr
 installcask vagrant
 installcask tor-browser
 installcask steam

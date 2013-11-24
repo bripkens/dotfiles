@@ -16,7 +16,7 @@ export EDITOR=vim
 export M2_REPO="$HOME/.m2/repository"
 
 # JAVA_HOME for Oracle's JDK
-export JAVA_HOME=$(stat -f "%N" /Library/Java/JavaVirtualMachines/*/Contents/Home/)
+export JAVA_HOME=$(stat -f "%N" /Library/Java/JavaVirtualMachines/*/Contents/Home/ | tail -1)
 
 # ICIS+ configuration
 export ICISPLUS_REPO="$HOME/projects/icisplus/repository"
