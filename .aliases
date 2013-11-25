@@ -50,6 +50,7 @@ alias hgc='hg commit -m'
 alias hgs='hg status'
 alias hga='hg add'
 alias hgau='hg addremove'
+alias hgh='hg heads | grep branch | sort'
 # Copy the name of the current branch to the clipboard 
 alias hgb="hg branch | \
            tr -d '\n' | \
