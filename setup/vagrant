@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+set -e
+
+vagrant box add precise64-node-nvm-memcached http://boxes.bripkens.de/precise64-node-nvm-memcached.box
+vagrant box add precise64-neo4j http://boxes.bripkens.de/precise64-neo4j.box
