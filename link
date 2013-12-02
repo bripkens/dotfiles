@@ -9,7 +9,7 @@ link() {
 }
 
 # Link necessary files
-for file in .{bashrc,gitconfig,hgrc}; do
+for file in .{bashrc,gitconfig,hgrc,tmux.conf}; do
 	link $file $file
 done
 
