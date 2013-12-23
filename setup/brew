@@ -38,6 +38,9 @@ brew install ack \
 			 vim \
 			 wget
 
+# to make pbcopy and pbpaste work with tmux
+brew install reattach-to-user-namespace --wrap-pbcopy-and-pbpaste
+
 # Install cask so that we can install standard apps
 brew tap phinze/homebrew-cask
 brew install brew-cask
