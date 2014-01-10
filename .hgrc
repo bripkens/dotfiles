@@ -1,2 +1,5 @@
 [ui]
 username = Ben Ripkens <bripkens.dev@gmail.com>
+
+[extensions]
+shelve=
