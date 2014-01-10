@@ -10,7 +10,7 @@ link() {
 
 # Link necessary files
 for file in .{bashrc,gitconfig,hgrc,tmux.conf}; do
-	link $file $file
+  link $file $file
 done
 
 link ".bashrc" ".bash_profile"
