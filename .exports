@@ -20,3 +20,6 @@ export JAVA_HOME=$(stat -f "%N" /Library/Java/JavaVirtualMachines/jdk1.7.*/Conte
 
 # ICIS+ configuration
 export ICISPLUS_REPO="$HOME/projects/icisplus/repository"
+
+# Always forward the 49XXX range for Docker
+export FORWARD_DOCKER_PORTS='true'
