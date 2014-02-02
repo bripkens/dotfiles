@@ -58,7 +58,7 @@ alias hgh='hg heads --template "{branch}|{rev}:{node|short}|{date|age}|{author|p
            sort | \
            column -t -s "|"'
 
-# Copy the name of the current branch to the clipboard 
+# Copy the name of the current branch to the clipboard
 alias hgb="hg branch | \
            tr -d '\n' | \
            pbcopy && \
@@ -134,3 +134,10 @@ ips () {
         fi
     done
 }
+
+macToIp () {
+  arp -a | grep "$1" -i | awk '{print($2)}' | sed -E -e 's/\(|\)//g'
+}
+
+alias concompute1="ssh $(macToIp 'B8:27:EB:CD:82:95') -l pi"
+alias concontroller="ssh $(macToIp 'B8:27:EB:4A:5C:35') -l pi"
