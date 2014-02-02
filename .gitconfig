@@ -6,6 +6,7 @@
   email = bripkens.dev@gmail.com
 
 [core]
+  ignorecase = false
   # Use custom `.gitignore` and `.gitattributes`
   excludesfile = ~/.dotfiles/.gitignore
   attributesfile = ~/.dotfiles/.gitattributes
@@ -18,5 +19,6 @@
 
 [alias]
   serve = !git daemon --reuseaddr --verbose --base-path=. --export-all ./.git
+
 [credential]
 	helper = osxkeychain

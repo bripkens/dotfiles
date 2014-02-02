@@ -58,7 +58,7 @@ alias hgh='hg heads --template "{branch}|{rev}:{node|short}|{date|age}|{author|p
            sort | \
            column -t -s "|"'
 
-# Copy the name of the current branch to the clipboard 
+# Copy the name of the current branch to the clipboard
 alias hgb="hg branch | \
            tr -d '\n' | \
            pbcopy && \
@@ -105,6 +105,12 @@ alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 alias hsql="$ICISPLUS_REPO/parent/StartAndInitHSQL.bash"
 alias icisplus="cd $ICISPLUS_REPO"
 alias checkz4="ping 172.19.2.24"
+copywidgets() {
+    rm -rf $ICISPLUS_REPO/web/src/main/webapp/VAADIN/widgetsets/*
+    cp -r $ICISPLUS_REPO/vaadin.widgetset/target/widgetsets/* \
+          $ICISPLUS_REPO/web/src/main/webapp/VAADIN/widgetsets/
+    rm -rf $ICISPLUS_REPO/web/src/main/webapp/VAADIN/widgetsets/WEB-INF
+}
 
 # Dev tools
 alias server="open http://localhost:8000/ && python -m SimpleHTTPServer"
@@ -128,3 +134,10 @@ ips () {
         fi
     done
 }
+
+macToIp () {
+  arp -a | grep "$1" -i | awk '{print($2)}' | sed -E -e 's/\(|\)//g'
+}
+
+alias concompute1="ssh $(macToIp 'B8:27:EB:CD:82:95') -l pi"
+alias concontroller="ssh $(macToIp 'B8:27:EB:4A:5C:35') -l pi"
