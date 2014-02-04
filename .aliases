@@ -135,6 +135,9 @@ ips () {
     done
 }
 
+alias pinghome="nmap -sn 192.168.0.1/24"
+alias pingwork="nmap -sn 10.10.10.0/24"
+
 macToIp () {
   arp -a | grep "$1" -i | awk '{print($2)}' | sed -E -e 's/\(|\)//g'
 }
