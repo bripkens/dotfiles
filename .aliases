@@ -58,6 +58,12 @@ alias hgh='hg heads --template "{branch}|{rev}:{node|short}|{date|age}|{author|p
            sort | \
            column -t -s "|"'
 
+hghp() {
+  format='{branch}|{rev}:{node|short}|{date|age}|{author|person}\n'
+  heads=`hg heads --template $format`
+  echo "$heads" | node ~/.dotfiles/scripts/mercurial-heads.js
+}
+
 # Copy the name of the current branch to the clipboard
 alias hgb="hg branch | \
            tr -d '\n' | \
@@ -81,7 +87,31 @@ alias hglc="hg log -l 1 | \
             pbcopy"
 
 # See what I have worked on the last few days
-alias hgla="hg log -u 'Ben Ripkens' | less"
+hgla() {
+  hg log --no-merges \
+         --date ${1:-yesterday} \
+         --template "{date(date, '%a %d.%m.%Y')} on {branch} \n {desc} \n\n" \
+         --user "Ben Ripkens" \
+         | less
+}
+
+hglac() {
+  d=${1:-yesterday}
+  hg log --no-merges \
+         --date $d \
+         --template "{desc}\n" \
+         --user "Ben Ripkens" \
+         | pbcopy
+  echo "Work log for $d copied to clipboard"
+}
+
+# Close current branch and switch to development main line
+hgclose() {
+  branch="$(hg branch)"
+  hg commit -m "Closing branch $branch" --close-branch
+  hg update develop
+  echo "Switched to develop after closing branch $branch"
+}
 
 #git aliases
 alias gitco='git checkout'
@@ -142,5 +172,5 @@ macToIp () {
   arp -a | grep "$1" -i | awk '{print($2)}' | sed -E -e 's/\(|\)//g'
 }
 
-alias concompute1="ssh $(macToIp 'B8:27:EB:CD:82:95') -l pi"
-alias concontroller="ssh $(macToIp 'B8:27:EB:4A:5C:35') -l pi"
+alias concompute1='ssh $(macToIp "B8:27:EB:CD:82:95") -l pi'
+alias concontroller='ssh $(macToIp "B8:27:EB:4A:5C:35") -l pi'
