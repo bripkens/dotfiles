@@ -23,3 +23,7 @@ export ICISPLUS_REPO="$HOME/projects/icisplus/repository"
 
 # Always forward the 49XXX range for Docker
 export FORWARD_DOCKER_PORTS='true'
+
+# POSTIT configuration (encrypted note management)
+export POSTIT_HOME="$HOME/Dropbox/postit"
+export POSTIT_KEY_ID="0xDCDA552A8E3E9445"
