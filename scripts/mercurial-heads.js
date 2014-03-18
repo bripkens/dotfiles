@@ -94,7 +94,7 @@ function print(heads) {
       printedBranches.push(head.branch);
       printHead(head, longest);
     });
-  }
+  };
 
   printSection('Main');
   printHeads(/^develop$/);
