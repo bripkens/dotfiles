@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+sudo git config core.ignorecase false

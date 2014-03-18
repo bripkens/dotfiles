@@ -172,5 +172,5 @@ macToIp () {
   arp -a | grep "$1" -i | awk '{print($2)}' | sed -E -e 's/\(|\)//g'
 }
 
-alias concompute1='ssh $(macToIp "B8:27:EB:CD:82:95") -l pi'
-alias concontroller='ssh $(macToIp "B8:27:EB:4A:5C:35") -l pi'
+alias concompute1='ssh `macToIp "B8:27:EB:CD:82:95"` -l pi'
+alias concontroller='ssh `macToIp "B8:27:EB:4A:5C:35"` -l pi'
