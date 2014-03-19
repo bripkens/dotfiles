@@ -38,6 +38,11 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
+# set the terminal title
+function termTitle {
+  echo -ne "\033]0;"$*"\007"
+}
+
 # svn aliases
 alias svni='svn propset svn:ignore -F "/.svnignore" -R .'
 alias svnc='svn commit -m'
