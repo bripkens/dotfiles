@@ -1,7 +1,7 @@
 # My Dotfiles
 
 ## Installation
-I do not yet enough experience with the one time setup scripts under `setup/`.
+I do not yet have enough experience with the one time setup scripts under `setup/`.
 You should therefore cherry pick the things that you actually require.
 
 The actual bash configuration can be linked in the following way:
