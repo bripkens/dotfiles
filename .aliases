@@ -43,6 +43,21 @@ function termTitle {
   echo -ne "\033]0;"$*"\007"
 }
 
+# mvn aliases
+function mvninit() {
+  read -p "Artifact name: " artifact
+
+  mvn archetype:generate \
+    --batch-mode \
+    -DarchetypeGroupId=org.apache.maven.archetypes \
+    -DarchetypeArtifactId=maven-archetype-quickstart \
+    -DarchetypeVersion=1.1 \
+    -DgroupId=de.bripkens \
+    -Dversion=0.1.0-SNAPSHOT \
+    -Dpackage="de.bripkens" \
+    -DartifactId=$artifact
+}
+
 # svn aliases
 alias svni='svn propset svn:ignore -F "/.svnignore" -R .'
 alias svnc='svn commit -m'
