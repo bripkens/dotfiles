@@ -40,3 +40,6 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # Auto completion for directory and file names
 bind 'TAB:menu-complete'
+
+# Add more completions
+source $HOME/.dotfiles/completions/*.completion.bash
