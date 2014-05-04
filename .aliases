@@ -50,17 +50,38 @@ function termTitle {
 
 # mvn aliases
 function mvninit() {
-  read -p "Artifact name: " artifact
+  if [[ -z "$1" ]]; then
+    read -p "Artifact name: " artifact
+  else
+    artifact=$1
+  fi
+
+  echo "Making sure you are running Java 8..."
+  usejava 8
+
+  echo "Bootstrapping $artifact using the Maven archetype system..."
 
   mvn archetype:generate \
     --batch-mode \
-    -DarchetypeGroupId=org.apache.maven.archetypes \
-    -DarchetypeArtifactId=maven-archetype-quickstart \
-    -DarchetypeVersion=1.1 \
+    --quiet \
+    -DarchetypeGroupId=de.bripkens \
+    -DarchetypeArtifactId=java-quickstart \
+    -DarchetypeVersion=0.1.0-SNAPSHOT \
     -DgroupId=de.bripkens \
-    -Dversion=0.1.0-SNAPSHOT \
+    -Dversion=0.1.0 \
     -Dpackage="de.bripkens" \
     -DartifactId=$artifact
+
+  echo "  Bootstrap successful!"
+
+  echo "Running initial build..."
+  cd $artifact
+  mvn --quiet install
+  mvn --quiet clean #get rid of target directory
+
+  echo "  Initial build successful!"
+  echo "Created files and directories:"
+  tree .
 }
 
 # svn aliases
