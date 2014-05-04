@@ -40,11 +40,6 @@ usejava() {
   echo "new JAVA_HOME: $JAVA_HOME"
 }
 
-# Switch to different Java versions
-alias usejava6="export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)"
-alias usejava7="export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)"
-alias usejava8="export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)"
-
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
