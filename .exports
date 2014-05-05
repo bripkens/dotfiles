@@ -21,6 +21,9 @@ export JAVA_HOME=$(stat -f "%N" /Library/Java/JavaVirtualMachines/jdk1.7.*/Conte
 # ICIS+ configuration
 export ICISPLUS_REPO="$HOME/projects/icisplus/repository"
 
+# HuGO configuration
+export HUGO_REPO="$HOME/projects/hugo/repository"
+
 # Always forward the 49XXX range for Docker
 export FORWARD_DOCKER_PORTS='true'
 

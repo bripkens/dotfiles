@@ -157,6 +157,9 @@ copywidgets() {
     rm -rf $ICISPLUS_REPO/web/src/main/webapp/VAADIN/widgetsets/WEB-INF
 }
 
+# HuGO
+alias hugo="cd $HUGO_REPO"
+
 # Dev tools
 alias server="open http://localhost:8000/ && python -m SimpleHTTPServer"
 alias canaryunsafe="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --disable-web-security"
@@ -189,3 +192,11 @@ macToIp () {
 
 alias concompute1='ssh `macToIp "B8:27:EB:CD:82:95"` -l pi'
 alias concontroller='ssh `macToIp "B8:27:EB:4A:5C:35"` -l pi'
+
+killtomcats() {
+    ps ax | \
+      grep tomcat | \
+      grep -v grep | \
+      awk '{ print $1 }' | \
+      xargs kill -9
+}
