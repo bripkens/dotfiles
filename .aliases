@@ -40,17 +40,48 @@ usejava() {
   echo "new JAVA_HOME: $JAVA_HOME"
 }
 
-# Switch to different Java versions
-alias usejava6="export JAVA_HOME=$(/usr/libexec/java_home -v 1.6)"
-alias usejava7="export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)"
-alias usejava8="export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)"
-
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
 # set the terminal title
 function termTitle {
   echo -ne "\033]0;"$*"\007"
+}
+
+# mvn aliases
+function mvninit() {
+  if [[ -z "$1" ]]; then
+    read -p "Artifact name: " artifact
+  else
+    artifact=$1
+  fi
+
+  echo "Making sure you are running Java 8..."
+  usejava 8
+
+  echo "Bootstrapping $artifact using the Maven archetype system..."
+
+  mvn archetype:generate \
+    --batch-mode \
+    --quiet \
+    -DarchetypeGroupId=de.bripkens \
+    -DarchetypeArtifactId=java-quickstart \
+    -DarchetypeVersion=0.1.0-SNAPSHOT \
+    -DgroupId=de.bripkens \
+    -Dversion=0.1.0 \
+    -Dpackage="de.bripkens" \
+    -DartifactId=$artifact
+
+  echo "  Bootstrap successful!"
+
+  echo "Running initial build..."
+  cd $artifact
+  mvn --quiet install
+  mvn --quiet clean #get rid of target directory
+
+  echo "  Initial build successful!"
+  echo "Created files and directories:"
+  tree .
 }
 
 # svn aliases
@@ -133,7 +164,7 @@ alias gitco='git checkout'
 alias gitc='git commit -m'
 alias gits='git status'
 alias gita='git add'
-alias gitau='git add . && git add -u :/ && echo "Added all changes" && git status'
+alias gitau='git add --all . && git add -u :/ && echo "Added all changes" && git status'
 alias gitm='git merge'
 alias gitd='git diff'
 alias gitr='git rm'
