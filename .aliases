@@ -66,9 +66,9 @@ function mvninit() {
     --quiet \
     -DarchetypeGroupId=de.bripkens \
     -DarchetypeArtifactId=java-quickstart \
-    -DarchetypeVersion=0.1.0-SNAPSHOT \
+    -DarchetypeVersion=0.1.0 \
     -DgroupId=de.bripkens \
-    -Dversion=0.1.0 \
+    -Dversion=0.1.0-SNAPSHOT \
     -Dpackage="de.bripkens" \
     -DartifactId=$artifact
 
