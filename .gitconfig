@@ -19,6 +19,8 @@
 
 [alias]
   serve = !git daemon --reuseaddr --verbose --base-path=. --export-all ./.git
+  contributors = !git shortlog -s -n --no-merges
+  summary = "! ~/.dotfiles/scripts/git-wtf"
 
 [credential]
   helper = osxkeychain
