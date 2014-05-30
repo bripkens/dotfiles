@@ -66,7 +66,7 @@ function mvninit() {
     --quiet \
     -DarchetypeGroupId=de.bripkens \
     -DarchetypeArtifactId=java-quickstart \
-    -DarchetypeVersion=0.1.0 \
+    -DarchetypeVersion=0.2.0 \
     -DgroupId=de.bripkens \
     -Dversion=0.1.0-SNAPSHOT \
     -Dpackage="de.bripkens" \
@@ -81,7 +81,7 @@ function mvninit() {
 
   echo "  Initial build successful!"
   echo "Created files and directories:"
-  tree .
+  tree -a .
 }
 
 # svn aliases
