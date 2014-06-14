@@ -66,7 +66,6 @@ function mvninit() {
     --quiet \
     -DarchetypeGroupId=de.bripkens \
     -DarchetypeArtifactId=java-quickstart \
-    -DarchetypeVersion=0.2.0 \
     -DgroupId=de.bripkens \
     -Dversion=0.1.0-SNAPSHOT \
     -Dpackage="de.bripkens" \
@@ -231,4 +230,11 @@ killtomcats() {
       grep -v grep | \
       awk '{ print $1 }' | \
       xargs kill -9
+}
+
+# VirtualBox DHCP may change the IP. Use redock to
+# update the DOCKER_HOST var
+redock() {
+  export DOCKER_IP=$(boot2docker ip 2>/dev/null)
+  export DOCKER_HOST="tcp://$DOCKER_IP:2375"
 }
