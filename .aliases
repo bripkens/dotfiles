@@ -257,6 +257,15 @@ dock() {
                --link redis:redis \
                dockerfile/redis \
                bash -c 'redis-cli -h $REDIS_PORT_6379_TCP_ADDR'
+  elif [ "$1" == "elasticsearch" ]; then
+    docker stop elasticsearch &> /dev/null
+    docker rm elasticsearch &> /dev/null
+    docker run --detach \
+               --publish 9200:9200 \
+               --publish 9300:9300 \
+               --name elasticsearch \
+               dockerfile/elasticsearch
+    echo "Elasticsearch started. Listening to $DOCKER_IP:9200"
   else
     echo "Unknown service. Sample usage: 'dock redis'"
   fi
