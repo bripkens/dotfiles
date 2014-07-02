@@ -66,7 +66,6 @@ function mvninit() {
     --quiet \
     -DarchetypeGroupId=de.bripkens \
     -DarchetypeArtifactId=java-quickstart \
-    -DarchetypeVersion=0.1.0 \
     -DgroupId=de.bripkens \
     -Dversion=0.1.0-SNAPSHOT \
     -Dpackage="de.bripkens" \
@@ -81,7 +80,7 @@ function mvninit() {
 
   echo "  Initial build successful!"
   echo "Created files and directories:"
-  tree .
+  tree -a .
 }
 
 # svn aliases
@@ -231,4 +230,43 @@ killtomcats() {
       grep -v grep | \
       awk '{ print $1 }' | \
       xargs kill -9
+}
+
+# VirtualBox DHCP may change the IP. Use redock to
+# update the DOCKER_HOST var
+redock() {
+  export DOCKER_IP=$(boot2docker ip 2>/dev/null)
+  export DOCKER_HOST="tcp://$DOCKER_IP:2375"
+}
+
+dock() {
+  redock
+
+  if [ "$1" == "redis" ]; then
+    docker stop redis &> /dev/null
+    docker rm redis &> /dev/null
+    docker run --detach \
+               --name redis \
+               --publish 6379:6379 \
+               dockerfile/redis
+    echo "Redis started. Listening to $DOCKER_IP:6379"
+  elif [ "$1" == "redis-cli" ]; then
+    docker run --interactive \
+               --tty \
+               --rm \
+               --link redis:redis \
+               dockerfile/redis \
+               bash -c 'redis-cli -h $REDIS_PORT_6379_TCP_ADDR'
+  elif [ "$1" == "elasticsearch" ]; then
+    docker stop elasticsearch &> /dev/null
+    docker rm elasticsearch &> /dev/null
+    docker run --detach \
+               --publish 9200:9200 \
+               --publish 9300:9300 \
+               --name elasticsearch \
+               dockerfile/elasticsearch
+    echo "Elasticsearch started. Listening to $DOCKER_IP:9200"
+  else
+    echo "Unknown service. Sample usage: 'dock redis'"
+  fi
 }
