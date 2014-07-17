@@ -270,3 +270,9 @@ dock() {
     echo "Unknown service. Sample usage: 'dock redis'"
   fi
 }
+
+# Open man page as PDF
+pman () { man -t "${1}" | open -f -a "Preview"; }
+
+# Show the location of a linked program
+ref() { ls -la $(which "${1}"); }
