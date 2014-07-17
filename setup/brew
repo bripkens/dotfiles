@@ -3,7 +3,7 @@
 set -e
 
 # Install brew
-ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
 # Temporarily add brew's bin directory to the path so that
 # this problem will not be reported by brew doctor.
