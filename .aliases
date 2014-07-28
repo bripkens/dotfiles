@@ -266,6 +266,20 @@ dock() {
                --name elasticsearch \
                dockerfile/elasticsearch
     echo "Elasticsearch started. Listening to $DOCKER_IP:9200"
+  elif [ "$1" == "mariadb" ]; then
+    docker run --interactive \
+               --tty \
+               --rm \
+               --publish 3306:3306 \
+               --name mariadb \
+               dockerfile/mariadb
+    echo "MariaDB started. Listening to $DOCKER_IP:3306"
+  elif [ "$1" == "mongodb" ]; then
+    docker run --detach \
+               --publish 27017:27017 \
+               --name mongodb \
+               dockerfile/mongodb
+    echo "MongoDB started. Listening to $DOCKER_IP:27017"
   else
     echo "Unknown service. Sample usage: 'dock redis'"
   fi
@@ -276,3 +290,6 @@ pman () { man -t "${1}" | open -f -a "Preview"; }
 
 # Show the location of a linked program
 ref() { ls -la $(which "${1}"); }
+
+# Convert an SVG file to a PNG file
+svg2png() { qlmanage -t -s 1000 -o . "${1}"; }
