@@ -23,3 +23,8 @@
   'paths': [
     '/Users/ben/projects/react-router'
   ]
+'dotfiles':
+  'title': 'dotfiles'
+  'paths': [
+    '/Users/ben/.dotfiles'
+  ]
