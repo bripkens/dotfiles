@@ -248,13 +248,13 @@ ref() { ls -la $(which "${1}"); }
 # Convert an SVG file to a PNG file
 svg2png() { qlmanage -t -s 1000 -o . "${1}"; }
 
-atom-install() {
-  apm install $1
+write-atom-packages() {
   ls -ad $HOME/.atom/packages/*/ | \
     sed -E 's/^.*\/(.*)\/$/\1/' > \
     $HOME/.dotfiles/atom-packages
-
-  echo "Wrote new package info to ~/.dotfiles. Remember to commit them!"
+  git -C $HOME/.dotfiles status
+  echo
+  echo "Wrote new package info to ~/.dotfiles. Remember to commit the dotfiles"
 }
 
 restore-atom-packages() {
