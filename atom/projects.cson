@@ -1,0 +1,25 @@
+'reflux':
+  'title': 'reflux'
+  'paths': [
+    '/Users/ben/projects/reflux'
+  ]
+'contacto-clojure':
+  'title': 'contacto-clojure'
+  'paths': [
+    '/Users/ben/projects/contacto'
+  ]
+'centerrecruiting':
+  'title': 'centerrecruiting'
+  'paths': [
+    '/Users/ben/projects/centerrecruiting'
+  ]
+'dock':
+  'title': 'dock'
+  'paths': [
+    '/Users/ben/projects/dock'
+  ]
+'react-router':
+  'title': 'react-router'
+  'paths': [
+    '/Users/ben/projects/react-router'
+  ]

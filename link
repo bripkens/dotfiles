@@ -14,3 +14,9 @@ for file in .{bashrc,gitconfig,hgrc,tmux.conf,vimrc}; do
 done
 
 link ".bashrc" ".bash_profile"
+
+# Link Atom Editor configuration
+files=`ls $HOME/.dotfiles/atom`
+for file in $files; do
+  link atom/$file .atom/$file
+done
