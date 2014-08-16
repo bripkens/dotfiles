@@ -8,6 +8,14 @@ link() {
   ln -s $from $to
 }
 
+linkr() {
+  mkdir -p $HOME/.$1
+  files=`ls $HOME/.dotfiles/$1`
+  for file in $files; do
+    link $1/$file .$1/$file
+  done
+}
+
 # Link necessary files
 for file in .{bashrc,gitconfig,hgrc,tmux.conf,vimrc}; do
   link $file $file
@@ -15,9 +23,5 @@ done
 
 link ".bashrc" ".bash_profile"
 
-# Link Atom Editor configuration
-mkdir -p $HOME/.atom
-files=`ls $HOME/.dotfiles/atom`
-for file in $files; do
-  link atom/$file .atom/$file
-done
+linkr atom
+linkr lein

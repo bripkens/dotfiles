@@ -28,3 +28,8 @@
   'paths': [
     '/Users/ben/.dotfiles'
   ]
+'contacto-client':
+  'title': 'contacto-client'
+  'paths': [
+    '/Users/ben/projects/contacto-client'
+  ]
