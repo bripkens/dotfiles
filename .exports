@@ -3,6 +3,9 @@
 # Let stuff installed via brew be before the system stuff
 export PATH="/usr/local/bin:$PATH"
 
+# search current directory, home directory, and projects folder
+export CDPATH=".:~:~/projects"
+
 # Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 

@@ -8,20 +8,21 @@ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 # Temporarily add brew's bin directory to the path so that
 # this problem will not be reported by brew doctor.
 export PATH="/usr/local/bin:$PATH"
- 
+
 # Make sure brew is up to date
 brew update
 brew upgrade
 
 # Check that everything is ok with the system config
 brew doctor
- 
+
 # Install command line tools
 brew install ack \
 			 ant \
 			 autoconf \
 			 automake \
 			 bash \
+       bash-completion \
 			 curl \
 			 gibo \
 			 git \
@@ -44,11 +45,11 @@ brew install reattach-to-user-namespace --wrap-pbcopy-and-pbpaste
 # Install cask so that we can install standard apps
 brew tap phinze/homebrew-cask
 brew install brew-cask
- 
+
 function installcask() {
   brew cask install "${@}" 2> /dev/null
 }
- 
+
 installcask dropbox
 installcask google-chrome
 installcask google-chrome-canary
@@ -86,5 +87,5 @@ installcask vagrant
 installcask tor-browser
 installcask steam
 installcask hipchat
- 
+
 brew cleanup
