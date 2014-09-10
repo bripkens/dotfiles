@@ -9,7 +9,7 @@
 'editor':
   'showIndentGuide': true
   'fontFamily': 'Inconsolata'
-  'fontSize': 20
+  'fontSize': 18
 'core':
   'themes': [
     'atom-dark-ui'
@@ -28,4 +28,6 @@
 'tree-view':
   'showOnRightSide': true
   'hideIgnoredNames': true
-'highlight-line': {}
+'highlight-line':
+  'underline':
+    'solid': false
