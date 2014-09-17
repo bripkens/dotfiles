@@ -10,6 +10,7 @@
   'showIndentGuide': true
   'fontFamily': 'Inconsolata'
   'fontSize': 20
+  'invisibles': {}
 'core':
   'themes': [
     'atom-dark-ui'
@@ -29,3 +30,7 @@
   'showOnRightSide': true
   'hideIgnoredNames': true
 'highlight-line': {}
+'linter':
+  'lintOnChange': false
+  'lintOnEditorFocus': false
+  'lintOnSave': false
