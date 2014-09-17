@@ -260,3 +260,6 @@ write-atom-packages() {
 restore-atom-packages() {
   cat $HOME/.dotfiles/atom-packages | xargs apm install
 }
+
+# redo previous command with sudo
+alias fuck='sudo $(history -p \!\!)'

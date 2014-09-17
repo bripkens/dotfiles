@@ -29,8 +29,10 @@
 'tree-view':
   'showOnRightSide': true
   'hideIgnoredNames': true
-'highlight-line': {}
 'linter':
   'lintOnChange': false
   'lintOnEditorFocus': false
   'lintOnSave': false
+'highlight-line':
+  'underline':
+    'solid': false
