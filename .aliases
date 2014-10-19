@@ -263,3 +263,9 @@ restore-atom-packages() {
 
 # redo previous command with sudo
 alias fuck='sudo $(history -p \!\!)'
+
+# By default I don't want to have all the Android development tools on my path
+useandroid() {
+  export PATH=${PATH}:/Applications/Android\ Studio.app/sdk/platform-tools:/Applications/Android\ Studio.app/sdk/tools
+}
+

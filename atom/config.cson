@@ -9,8 +9,7 @@
 'editor':
   'showIndentGuide': true
   'fontFamily': 'Inconsolata'
-  'fontSize': 20
-  'invisibles': {}
+  'fontSize': 18
 'core':
   'themes': [
     'atom-dark-ui'
@@ -36,3 +35,6 @@
 'highlight-line':
   'underline':
     'solid': false
+  'enableUnderline': true
+'jsformat':
+  'format_on_save': false

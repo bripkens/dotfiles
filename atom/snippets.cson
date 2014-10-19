@@ -14,6 +14,11 @@
 #     'body': 'console.log $1'
 #
 
+'*':
+  'start a new .bowerrc file':
+    'prefix': 'bowerrc'
+    'body': '{\n  "directory": "components"\n}'
+
 '.source.js':
   'new ES 6 promise':
     'prefix': 'es6p'
