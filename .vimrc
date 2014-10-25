@@ -18,3 +18,7 @@ set incsearch
 " http://stackoverflow.com/questions/235439/vim-80-column-layout-concerns
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
+
+" vim-markdown
+" Do not fold sections
+let g:vim_markdown_folding_disabled=1

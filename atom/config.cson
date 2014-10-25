@@ -36,6 +36,5 @@
     'lintOnEditorFocus': false
     'lintOnSave': false
     'format_on_save': false
-  'highlight-line':
-    'underline': {}
-  'jsformat': {}
+  'jsformat':
+    'format_on_save': false
