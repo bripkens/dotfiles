@@ -1,3 +1,7 @@
+" Use Vim settings, rather then Vi settings (much better!).
+" This must be first, because it changes other options as a side effect.
+set nocompatible
+
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
@@ -42,9 +46,6 @@ set showmode
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
 
-" Make Vim more useful
-set nocompatible
-
 " highlight the current line
 set cursorline
 
@@ -54,10 +55,29 @@ set mouse=a
 " Add the g flag to search/replace by default
 set gdefault
 
+" Reload files changed outside vim
+set autoread
+
+" ============= Coding practices =====================
+
+" show row and column information in the status bar
+set ruler
+
+" Display tabs and trailing spaces visually
+set list listchars=tab:\ \ ,trail:·
+
 " use different background color after 80 chars
 " http://stackoverflow.com/questions/235439/vim-80-column-layout-concerns
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
+
+" ================ Scrolling ========================
+
+set scrolloff=8         "Start scrolling when we're 8 lines away from margins
+set sidescrolloff=15
+set sidescroll=1
+
+" ================ Plugins  ========================
 
 " vim-markdown
 " Do not fold sections
