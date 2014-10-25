@@ -34,6 +34,9 @@ export FORWARD_DOCKER_PORTS='true'
 export POSTIT_HOME="$HOME/Dropbox/postit"
 export POSTIT_KEY_ID="0xDCDA552A8E3E9445"
 
+# golang
+export GOPATH="$HOME/.gocode"
+
 # Standard Docker configuration
 export DOCKER_IP=192.168.59.103
 export DOCKER_HOST=tcp://192.168.59.103:2376
