@@ -11,8 +11,48 @@ set softtabstop=2
 set smarttab
 set autoindent
 set backspace=indent,eol,start
+
+" highlight searches
 set hlsearch
+
+" highlight dynamically as pattern is typed
 set incsearch
+
+" Ignore case of searches
+set ignorecase
+
+" Always show status line
+set laststatus=2
+
+" Don’t reset cursor to start of line when moving around.
+set nostartofline
+
+" Show the filename in the window titlebar
+set title
+
+" be silent
+set noerrorbells
+
+" keep a big history
+set history=1000
+
+" always show the mode in which one is in
+set showmode
+
+" Use the OS clipboard by default (on versions compiled with `+clipboard`)
+set clipboard=unnamed
+
+" Make Vim more useful
+set nocompatible
+
+" highlight the current line
+set cursorline
+
+" enable mouse in all modes
+set mouse=a
+
+" Add the g flag to search/replace by default
+set gdefault
 
 " use different background color after 80 chars
 " http://stackoverflow.com/questions/235439/vim-80-column-layout-concerns
@@ -22,3 +62,4 @@ match OverLength /\%81v.\+/
 " vim-markdown
 " Do not fold sections
 let g:vim_markdown_folding_disabled=1
+
