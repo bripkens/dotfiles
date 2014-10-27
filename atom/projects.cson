@@ -33,3 +33,8 @@
   'paths': [
     '/Users/ben/projects/contacto-client'
   ]
+'github-event-streaming':
+  'title': 'github-event-streaming'
+  'paths': [
+    '/Users/ben/projects/github-event-streaming'
+  ]

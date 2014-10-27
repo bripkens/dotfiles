@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+git submodule init
+
 link() {
   from="$HOME/.dotfiles/$1"
   to="$HOME/$2"
@@ -17,7 +19,7 @@ linkr() {
 }
 
 # Link necessary files
-for file in .{bashrc,gitconfig,hgrc,tmux.conf,vimrc}; do
+for file in .{bashrc,gitconfig,hgrc,tmux.conf,vimrc,vim}; do
   link $file $file
 done
 

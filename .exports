@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
+# golang
+export GOPATH="$HOME/.gocode"
+
 # Let stuff installed via brew be before the system stuff
-export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/bin:$PATH:$GOPATH/bin"
 
 # search current directory, home directory, and projects folder
 export CDPATH=".:~:~/projects"
