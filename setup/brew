@@ -24,10 +24,12 @@ brew install ack \
 			 bash \
        bash-completion \
 			 curl \
+       fig \
 			 gibo \
 			 git \
 			 ivy \
 			 leiningen \
+       macvim \
 			 maven \
 			 mercurial \
 			 ncdu \
@@ -88,4 +90,5 @@ installcask tor-browser
 installcask steam
 installcask hipchat
 
+brew linkapps
 brew cleanup
