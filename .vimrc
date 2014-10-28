@@ -105,3 +105,6 @@ nmap <leader>b :NERDTreeToggle<CR>
 let g:multi_cursor_next_key='<C-d>' " use Ctrl-D so select multiple lines with
                                     " multiple cursors. This is part of the
                                     " vim-multiple-cursors plugin
+
+" search hidden files with C+P
+let g:ctrlp_show_hidden = 1
