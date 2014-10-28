@@ -9,7 +9,10 @@ syntax on
 filetype plugin indent on
 
 " darkmode
+let g:solarized_termtrans = 1
+let g:solarized_termcolors=256
 set background=dark
+colorscheme solarized
 
 set number
 set expandtab
@@ -86,6 +89,19 @@ set sidescroll=1
 " Do not fold sections
 let g:vim_markdown_folding_disabled=1
 
+" NERDTree
+" Show hidden files by default
+let NERDTreeShowHidden=1
+
+let NERDTreeIgnore = ['\.DS_Store$']
 
 " ================= Keys = ========================
-let g:multi_cursor_next_key='<C-d>'
+
+let mapleader = "," " , is just easier to type
+
+" toggle the NERDTree via ,-b
+nmap <leader>b :NERDTreeToggle<CR>
+
+let g:multi_cursor_next_key='<C-d>' " use Ctrl-D so select multiple lines with
+                                    " multiple cursors. This is part of the
+                                    " vim-multiple-cursors plugin
