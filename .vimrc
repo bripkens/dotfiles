@@ -86,3 +86,6 @@ set sidescroll=1
 " Do not fold sections
 let g:vim_markdown_folding_disabled=1
 
+
+" ================= Keys = ========================
+let g:multi_cursor_next_key='<C-d>'
