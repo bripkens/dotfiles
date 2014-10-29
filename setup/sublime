@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-set -e
-
-base="$HOME/Library/Application Support/Sublime Text 3"
-settings="$base/Settings"
-
-# TODO
-cp -r "$HOME/.dotfiles/setup/sublime_settings" "$settings"
