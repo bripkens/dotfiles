@@ -8,6 +8,8 @@ call pathogen#infect()
 syntax on
 filetype plugin indent on
 
+
+
 " darkmode
 let g:solarized_termtrans = 1
 let g:solarized_termcolors=256
