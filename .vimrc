@@ -108,3 +108,9 @@ let g:multi_cursor_next_key='<C-d>' " use Ctrl-D so select multiple lines with
 
 " search hidden files with C+P
 let g:ctrlp_show_hidden = 1
+
+" vim-gitgutter
+" the sign column (which shows file change information next to the
+" line numbers) should use the same background color as the line
+" numbers
+:highlight clear SignColumn
