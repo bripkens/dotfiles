@@ -117,3 +117,6 @@ let g:multi_cursor_next_key='<C-d>' " use Ctrl-D so select multiple lines with
 " search hidden files with C+P
 let g:ctrlp_show_hidden = 1
 
+" use control tab to switch tabs
+noremap <c-tab> :tabnext<cr>
+noremap <C-S-Tab> :tabprev<CR>
