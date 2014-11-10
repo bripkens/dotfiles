@@ -39,6 +39,5 @@
     'format_on_save': false
   'jsformat':
     'format_on_save': false
-  'git-blame': {}
 '.handlebars.html.text':
   'editor': {}
