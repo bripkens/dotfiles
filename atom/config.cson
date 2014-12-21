@@ -10,8 +10,8 @@
   'editor':
     'showIndentGuide': true
     'fontFamily': 'Inconsolata'
-    'fontSize': 18
-    'invisibles': {}
+    'fontSize': 21
+    'autoIndentOnPaste': false
   'core':
     'themes': [
       'atom-dark-ui'

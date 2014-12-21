@@ -1,5 +1,7 @@
 *.private
 *.sublime-project
+.vim/.netrwhist
+.private
 
 ### https://raw.github.com/github/gitignore/master/Global/OSX.gitignore
 
