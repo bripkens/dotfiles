@@ -1,4 +1,4 @@
-'global':
+'*':
   'exception-reporting':
     'userId': '4b3ffdf7-2898-41a6-5bfe-0db4ef7da184'
   'release-notes':
@@ -8,36 +8,33 @@
   'metrics':
     'userId': '705308154db7e4cf5cc5c06da0062bdd2fd4675d'
   'editor':
-    'showIndentGuide': true
     'fontFamily': 'Inconsolata'
     'fontSize': 18
+    'showIndentGuide': true
+    'autoIndentOnPaste': false
     'invisibles': {}
   'core':
-    'themes': [
-      'atom-dark-ui'
-      'twilight-syntax-spacegray-ui'
-    ]
     'ignoredNames': [
       '.git'
       '.svn'
       '.DS_Store'
     ]
-    'projectHome': '/Users/ben/projects'
-    'useReactEditor': true
     'disabledPackages': [
       'linter-jshint'
       'highlight-line'
       'atom-handlebars'
     ]
+    'themes': [
+      'atom-dark-ui'
+      'twilight-syntax-spacegray-ui'
+    ]
+    'projectHome': '/Users/ben/projects'
   'tree-view':
-    'showOnRightSide': true
     'hideIgnoredNames': true
+    'showOnRightSide': true
   'linter':
+    'lintOnSave': false
     'lintOnChange': false
     'lintOnEditorFocus': false
-    'lintOnSave': false
-    'format_on_save': false
   'jsformat':
     'format_on_save': false
-'.handlebars.html.text':
-  'editor': {}
