@@ -28,6 +28,8 @@
   'cmd-b': 'tree-view:reveal-active-file'
   'cmd-shift-b': 'tree-view:toggle'
 
+'.platform-darwin atom-text-editor':
+  'ctrl-shift-c': 'bracket-matcher:close-tag'
 
 '.workspace .editor:not(.mini)':
   'cmd-shift-c': 'editor:toggle-line-comments'
