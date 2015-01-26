@@ -7,7 +7,7 @@ done
 unset file
 
 ### Activate NVM
-source $HOME/.nvm/nvm.sh
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
