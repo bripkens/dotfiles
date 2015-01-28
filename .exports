@@ -26,6 +26,7 @@ export ICISPLUS_REPO="$HOME/projects/icisplus/repository"
 
 # HuGO configuration
 export HUGO_REPO="$HOME/projects/hugo/repository"
+export HUGO_DOCBASE="$HOME/projects/hugo/ide/apache-tomcat-7.0.57/temp/docBase"
 
 # Always forward the 49XXX range for Docker
 export FORWARD_DOCKER_PORTS='true'
