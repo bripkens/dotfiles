@@ -1,40 +1,41 @@
-'*':
-  'exception-reporting':
-    'userId': '4b3ffdf7-2898-41a6-5bfe-0db4ef7da184'
-  'release-notes':
-    'viewedVersion': '0.73.0'
-  'welcome':
-    'showOnStartup': false
-  'metrics':
-    'userId': '705308154db7e4cf5cc5c06da0062bdd2fd4675d'
-  'editor':
-    'fontFamily': 'Inconsolata'
-    'fontSize': 18
-    'showIndentGuide': true
-    'autoIndentOnPaste': false
-    'invisibles': {}
-  'core':
-    'ignoredNames': [
-      '.git'
-      '.svn'
-      '.DS_Store'
+"*":
+  "exception-reporting":
+    userId: "4b3ffdf7-2898-41a6-5bfe-0db4ef7da184"
+  "release-notes":
+    viewedVersion: "0.73.0"
+  welcome:
+    showOnStartup: false
+  metrics:
+    userId: "705308154db7e4cf5cc5c06da0062bdd2fd4675d"
+  editor:
+    fontFamily: "Inconsolata"
+    fontSize: 22
+    showIndentGuide: true
+    autoIndentOnPaste: false
+    invisibles: {}
+  core:
+    ignoredNames: [
+      ".git"
+      ".svn"
+      ".DS_Store"
     ]
-    'disabledPackages': [
-      'linter-jshint'
-      'highlight-line'
-      'atom-handlebars'
+    disabledPackages: [
+      "linter-jshint"
+      "highlight-line"
+      "atom-handlebars"
     ]
-    'themes': [
-      'atom-dark-ui'
-      'twilight-syntax-spacegray-ui'
+    themes: [
+      "atom-dark-ui"
+      "twilight-syntax-spacegray-ui"
     ]
-    'projectHome': '/Users/ben/projects'
-  'tree-view':
-    'hideIgnoredNames': true
-    'showOnRightSide': true
-  'linter':
-    'lintOnSave': false
-    'lintOnChange': false
-    'lintOnEditorFocus': false
-  'jsformat':
-    'format_on_save': false
+    projectHome: "/Users/ben/projects"
+    audioBeep: false
+  "tree-view":
+    hideIgnoredNames: true
+    showOnRightSide: true
+  linter:
+    lintOnChange: false
+    lintOnEditorFocus: false
+    showErrorInline: true
+  jsformat:
+    format_on_save: false
