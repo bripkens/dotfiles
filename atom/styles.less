@@ -8,24 +8,50 @@
  * http://www.lesscss.org
  */
 
-.tree-view {
 
-}
+@editor-background-color: #141414;
 
 .editor {
-  @editor-background: #141414;
-  background-color: @editor-background;
+  background-color: @editor-background-color;
 
-  .cursor-line {
-    background-color: lighten(@editor-background, 7%) !important;
+  .wrap-guide {
+    background-color: red;
+    opacity: 0.8;
+  }
+}
+
+atom-text-editor::shadow {
+
+  .cursor {
+    border-color: white;
+    border-width: 2px;
   }
 
   .gutter {
-    background-color: @editor-background;
+    background-color: lighten(@editor-background-color, 3%);
+  }
+
+  .selection .region {
+    background: #333;
+    border-radius: 3px;
   }
 
   .bracket-matcher {
     background: #329e00;
     border: 0;
   }
+}
+
+.list-group li:not(.list-nested-item).status-ignored,
+.list-tree li:not(.list-nested-item).status-ignored,
+.list-group li.list-nested-item.status-ignored > .list-item,
+.list-tree li.list-nested-item.status-ignored > .list-item {
+  color: #666;
+}
+
+.list-group li:not(.list-nested-item).status-ignored:hover,
+.list-tree li:not(.list-nested-item).status-ignored:hover,
+.list-group li.list-nested-item.status-ignored > .list-item:hover,
+.list-tree li.list-nested-item.status-ignored > .list-item:hover {
+  color: #fff;
 }

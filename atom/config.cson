@@ -9,7 +9,7 @@
     userId: "705308154db7e4cf5cc5c06da0062bdd2fd4675d"
   editor:
     fontFamily: "Inconsolata"
-    fontSize: 22
+    fontSize: 21
     showIndentGuide: true
     autoIndentOnPaste: false
     invisibles: {}
@@ -21,7 +21,6 @@
     ]
     disabledPackages: [
       "linter-jshint"
-      "highlight-line"
       "atom-handlebars"
     ]
     themes: [
@@ -39,3 +38,5 @@
     showErrorInline: true
   jsformat:
     format_on_save: false
+  "filetype-color":
+    enabled: "false"
