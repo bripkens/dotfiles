@@ -24,6 +24,10 @@
   'cmd-e': 'editor:delete-line'
   'cmd-shift-b': 'tree-view:toggle'
 
+'atom-workspace atom-text-editor:not([mini])':
+  'alt-up': 'editor:move-line-up'
+  'alt-down': 'editor:move-line-down'
+
 '.platform-darwin':
   'cmd-b': 'tree-view:reveal-active-file'
   'cmd-shift-b': 'tree-view:toggle'
