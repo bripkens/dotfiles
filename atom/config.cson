@@ -40,3 +40,4 @@
     format_on_save: false
   "filetype-color":
     enabled: "false"
+  "markdown-preview": {}

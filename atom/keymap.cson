@@ -16,9 +16,22 @@
 #   'ctrl-P': 'core:move-up'
 #   'ctrl-p': 'core:move-down'
 #
+
+'body':
+  'ctrl-k': 'pane:split-up'
+  'ctrl-j': 'pane:split-down'
+  'ctrl-h': 'pane:split-left'
+  'ctrl-l': 'pane:split-right'
+
 'body .native-key-bindings':
   'ctrl-tab': 'core:focus-next'
   'ctrl-shift-tab': 'core:focus-previous'
+
+# unset the select line shortcut so that go go line can be rebound
+'atom-text-editor':
+  'cmd-l': 'unset!'
+'.platform-darwin, .platform-win32, .platform-linux':
+  'cmd-l': 'go-to-line:toggle'
 
 '.editor:not(.mini)':
   'cmd-e': 'editor:delete-line'
