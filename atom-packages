@@ -21,6 +21,8 @@ linter-csslint
 linter-eslint
 linter-jshint
 linter
+markdown-toc
+merge-conflicts
 monokai
 project-manager
 script
