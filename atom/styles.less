@@ -11,6 +11,10 @@
 
 @editor-background-color: #141414;
 
+.item-views {
+  background: @editor-background-color;
+}
+
 .editor {
   background-color: @editor-background-color;
 
@@ -22,6 +26,19 @@
 
 .markdown-preview atom-text-editor {
   color: #555;
+}
+
+.editor.markdown, .editor.markdown::shadow {
+
+  .scroll-view {
+    max-width: 44em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .wrap-guide, .line-numbers {
+    display: none !important;
+  }
 }
 
 atom-text-editor::shadow {

@@ -24,3 +24,4 @@ atom.workspaceView.eachEditorView (editorView) ->
     editor.setSoftTabs(false)
   if path.extname(editor.getPath()) is '.md'
     editor.setSoftWrapped(true)
+    editorView.element.classList.add('markdown')
