@@ -18,10 +18,11 @@ path = require 'path'
 # Set Makefile[.any extension] and '.mk' files to always use hard tabs
 atom.workspaceView.eachEditorView (editorView) ->
   editor = editorView.getEditor()
-  if path.basename(editor.getPath()) is 'Makefile'
+  extension = path.extname(editor.getPath())
+
+  if path.basename(editor.getPath()) is 'Makefile' or extension is '.mk'
     editor.setSoftTabs(false)
-  if path.extname(editor.getPath()) is '.mk'
-    editor.setSoftTabs(false)
-  if path.extname(editor.getPath()) is '.md'
+
+  if /^\.(md|markdown)$/i.test(extension)
     editor.setSoftWrapped(true)
     editorView.element.classList.add('markdown')
