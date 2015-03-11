@@ -39,9 +39,6 @@ set laststatus=2
 " Don’t reset cursor to start of line when moving around.
 set nostartofline
 
-" Show the filename in the window titlebar
-set title
-
 " be silent
 set noerrorbells
 

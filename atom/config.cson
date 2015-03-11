@@ -9,10 +9,10 @@
     userId: "705308154db7e4cf5cc5c06da0062bdd2fd4675d"
   editor:
     fontFamily: "Inconsolata"
-    fontSize: 23
     showIndentGuide: true
     autoIndentOnPaste: false
     invisibles: {}
+    fontSize: 20
   core:
     ignoredNames: [
       ".git"
