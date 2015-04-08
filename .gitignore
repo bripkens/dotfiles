@@ -2,6 +2,7 @@
 *.sublime-project
 .vim/.netrwhist
 .private
+npm-debug.log
 
 ### https://raw.github.com/github/gitignore/master/Global/OSX.gitignore
 
