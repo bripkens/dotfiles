@@ -22,7 +22,7 @@
 '.source.js':
   'new ES 6 promise':
     'prefix': 'es6p'
-    'body': 'new Promise(function(resolve, reject) {\n  $1\n});'
+    'body': 'new Promise((resolve, reject) => {\n  $1\n});'
 
   'commonJS import':
     'prefix': 'cre'
@@ -31,6 +31,15 @@
   'relative commonJS imports':
     'prefix': 'rel'
     'body': 'var $1 = require(\'./$1\');'
+
+  'ES6 import':
+    'prefix': 'imp'
+    'body': 'import $1 from \'$1\';'
+
+  'ES6 import':
+    'prefix': 'relimp'
+    'body': 'import $1 from \'./$1\';'
+
 
   'new React Component':
     'prefix': 'reactcomp'
@@ -49,17 +58,12 @@
   'new React module':
     'prefix': 'reactmod'
     'body': """
-    var React = require('react');
+    'use strict';
 
-    var rpt = React.PropTypes;
+    import React from 'react';
 
-    var $1 = React.createClass({
-
-      propTypes: {
-        // propName: rpt.renderable.isRequired
-      },
-
-      render: function() {
+    const $1 = React.createClass({
+      render() {
         return (
           <div>
 
@@ -68,7 +72,7 @@
       }
     });
 
-    module.exports = $1;
+    export default $1;
     """
 
   'React PropTypes Helper':

@@ -40,6 +40,13 @@ export NVM_DIR="$HOME/.nvm"
 
 # Standard Docker configuration
 export DOCKER_IP=192.168.59.103
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH="$HOME/.boot2docker/certs/boot2docker-vm"
-export DOCKER_TLS_VERIFY=1
+
+# For insecure setup
+export DOCKER_HOST=tcp://192.168.59.103:2375
+unset DOCKER_CERT_PATH
+unset DOCKER_TLS_VERIFY
+
+# For secure Docker usage
+#export DOCKER_HOST=tcp://192.168.59.103:2376
+#export DOCKER_CERT_PATH="$HOME/.boot2docker/certs/boot2docker-vm"
+#export DOCKER_TLS_VERIFY=1

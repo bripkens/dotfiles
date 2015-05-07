@@ -12,7 +12,7 @@
     showIndentGuide: true
     autoIndentOnPaste: false
     invisibles: {}
-    fontSize: 21
+    fontSize: 26
   core:
     ignoredNames: [
       ".git"
@@ -22,8 +22,7 @@
     disabledPackages: [
       "linter-jshint"
       "atom-handlebars"
-      "linter-eslint"
-      "linter"
+      "autosave"
     ]
     themes: [
       "atom-dark-ui"
