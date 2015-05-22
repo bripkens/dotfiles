@@ -11,8 +11,9 @@
     fontFamily: "Inconsolata"
     showIndentGuide: true
     autoIndentOnPaste: false
-    invisibles: {}
-    fontSize: 26
+    invisibles:
+      {}
+    fontSize: 29
   core:
     ignoredNames: [
       ".git"
@@ -24,12 +25,12 @@
       "atom-handlebars"
       "autosave"
     ]
+    projectHome: "/Users/ben/projects"
+    audioBeep: false
     themes: [
       "atom-dark-ui"
       "twilight-syntax-spacegray-ui"
     ]
-    projectHome: "/Users/ben/projects"
-    audioBeep: false
   "tree-view":
     hideIgnoredNames: true
     showOnRightSide: true
@@ -43,6 +44,11 @@
     enabled: "false"
   "markdown-preview":
     liveUpdate: false
-  "white-cursor": {}
+  "white-cursor":
+    {}
   autosave:
     enabled: true
+  "autocomplete-plus":
+    enableAutoActivation: false
+  tabs:
+    {}

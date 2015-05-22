@@ -15,8 +15,16 @@
   background: @editor-background-color;
 }
 
-.editor {
-  background-color: @editor-background-color;
+atom-text-editor {
+  background-color: @editor-background-color !important;
+}
+
+atom-text-editor::shadow {
+  background-color: @editor-background-color !important;
+
+  .lines {
+    background-color: @editor-background-color !important;
+  }
 
   .wrap-guide {
     background-color: red;
@@ -24,11 +32,11 @@
   }
 }
 
-.markdown-preview atom-text-editor {
+.markdown-preview atom-text-editor::shadow {
   color: #555;
 }
 
-.editor.markdown, .editor.markdown::shadow {
+atom-text-editor.markdown, atom-text-editor.markdown::shadow {
   .scroll-view {
     max-width: 44em;
     margin-left: auto;
@@ -84,4 +92,9 @@ atom-text-editor::shadow {
 .list-group li.list-nested-item.status-ignored > .list-item:hover,
 .list-tree li.list-nested-item.status-ignored > .list-item:hover {
   color: #fff;
+}
+
+autocomplete-suggestion-list.select-list.popover-list ol.list-group li {
+  line-height: 1.2;
+  font-size: 0.8em;
 }

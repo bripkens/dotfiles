@@ -1,22 +1,3 @@
-# Your keymap
-#
-# Atom keymaps work similarly to stylesheets. Just as stylesheets use selectors
-# to apply styles to elements, Atom keymaps use selectors to associate
-# keystrokes with events in specific contexts.
-#
-# You can create a new keybinding in this file by typing "key" and then hitting
-# tab.
-#
-# Here's an example taken from Atom's built-in keymap:
-#
-# '.editor':
-#   'enter': 'editor:newline'
-#
-# 'body':
-#   'ctrl-P': 'core:move-up'
-#   'ctrl-p': 'core:move-down'
-#
-
 'body':
   'ctrl-k': 'pane:split-up'
   'ctrl-j': 'pane:split-down'
@@ -33,7 +14,7 @@
 '.platform-darwin, .platform-win32, .platform-linux':
   'cmd-l': 'go-to-line:toggle'
 
-'.editor:not(.mini)':
+'atom-text-editor:not(.mini)':
   'cmd-e': 'editor:delete-line'
   'cmd-shift-b': 'tree-view:toggle'
 
@@ -48,5 +29,5 @@
 '.platform-darwin atom-text-editor':
   'ctrl-shift-c': 'bracket-matcher:close-tag'
 
-'.workspace .editor:not(.mini)':
+'atom-workspace atom-text-editor:not(.mini)':
   'cmd-shift-c': 'editor:toggle-line-comments'

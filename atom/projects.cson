@@ -1,40 +1,70 @@
-'reflux':
-  'title': 'reflux'
+'ui-client':
+  'title': 'ui-client'
   'paths': [
-    '/Users/ben/projects/reflux'
+    '/Users/ben/projects/instana/repos/ui-client'
   ]
-'contacto-clojure':
-  'title': 'contacto-clojure'
+'ui-map':
+  'title': 'ui-map'
   'paths': [
-    '/Users/ben/projects/contacto'
+    '/Users/ben/projects/instana/repos/ui-map'
   ]
-'centerrecruiting':
-  'title': 'centerrecruiting'
+'ui-forge':
+  'title': 'ui-forge'
   'paths': [
-    '/Users/ben/projects/centerrecruiting'
+    '/Users/ben/projects/instana/repos/ui-forge'
   ]
-'dock':
-  'title': 'dock'
+'ui-sdk':
+  'title': 'ui-sdk'
   'paths': [
-    '/Users/ben/projects/dock'
+    '/Users/ben/projects/instana/repos/ui-sdk'
   ]
-'react-router':
-  'title': 'react-router'
+'ui-services':
+  'title': 'ui-services'
   'paths': [
-    '/Users/ben/projects/react-router'
+    '/Users/ben/projects/instana/repos/ui-services'
   ]
-'dotfiles':
-  'title': 'dotfiles'
+'ui-components':
+  'title': 'ui-components'
+  'paths': [
+    '/Users/ben/projects/instana/repos/ui-components'
+  ]
+'ui-backend-dummy':
+  'title': 'ui-backend-dummy'
+  'paths': [
+    '/Users/ben/projects/instana/repos/ui-backend-dummy'
+  ]
+'project-sidebar':
+  'title': 'project-sidebar'
+  'paths': [
+    '/Users/ben/projects/project-sidebar'
+  ]
+'instalog.js':
+  'title': 'instalog.js'
+  'paths': [
+    '/Users/ben/projects/instana/repos/instalog.js'
+  ]
+'ui-backend':
+  'title': 'ui-backend'
+  'paths': [
+    '/Users/ben/projects/instana/repos/ui-backend'
+  ]
+'ui-deployment':
+  'title': 'ui-deployment'
+  'paths': [
+    '/Users/ben/projects/instana/repos/ui-deployment'
+  ]
+'docs':
+  'title': 'docs'
+  'paths': [
+    '/Users/ben/projects/instana/repos/docs'
+  ]
+'.dotfiles':
+  'title': '.dotfiles'
   'paths': [
     '/Users/ben/.dotfiles'
   ]
-'contacto-client':
-  'title': 'contacto-client'
+'ui-themes':
+  'title': 'ui-themes'
   'paths': [
-    '/Users/ben/projects/contacto-client'
-  ]
-'github-event-streaming':
-  'title': 'github-event-streaming'
-  'paths': [
-    '/Users/ben/projects/github-event-streaming'
+    '/Users/ben/projects/instana/repos/ui-themes'
   ]

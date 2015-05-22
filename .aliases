@@ -173,8 +173,8 @@ alias gitb='git branch'
 alias gitbc='git branch --no-color 2> /dev/null | sed -e "/^[^*]/d" -e "s/* \(.*\)/\1/" | tr -d "\n" | pbcopy'
 alias gitl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%Creset' --abbrev-commit"
 alias gitre='git status --porcelain | q "select c2 from -" | grep xls | xargs git checkout'
-alias gitpo='git push origin $(git branch --no-color 2> /dev/null | sed -e "/^[^*]/d" -e "s/* \(.*\)/\1/")'
-alias gitpu='git push upstream $(git branch --no-color 2> /dev/null | sed -e "/^[^*]/d" -e "s/* \(.*\)/\1/")'
+alias gitpo='git push origin $(git branch --no-color 2> /dev/null | sed -e "/^[^*]/d" -e "s/* \(.*\)/\1/") --tags'
+alias gitpu='git push upstream $(git branch --no-color 2> /dev/null | sed -e "/^[^*]/d" -e "s/* \(.*\)/\1/") --tags'
 
 # SSH aliases
 alias ctv='ssh bripkens.de -p 46812'
