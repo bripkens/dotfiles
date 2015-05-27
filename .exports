@@ -21,22 +21,14 @@ export M2_REPO="$HOME/.m2/repository"
 # JAVA_HOME for Oracle's JDK (avoid Java 8)
 export JAVA_HOME=$(stat -f "%N" /Library/Java/JavaVirtualMachines/jdk1.8.*/Contents/Home/ | tail -1)
 
-# ICIS+ configuration
-export ICISPLUS_REPO="$HOME/projects/icisplus/repository"
-
-# HuGO configuration
-export HUGO_REPO="$HOME/projects/hugo/repository"
-export HUGO_DOCBASE="$HOME/projects/hugo/ide/apache-tomcat-7.0.57/temp/docBase"
-
-# Always forward the 49XXX range for Docker
-export FORWARD_DOCKER_PORTS='true'
-
-# POSTIT configuration (encrypted note management)
-export POSTIT_HOME="$HOME/Dropbox/postit"
-export POSTIT_KEY_ID="0xDCDA552A8E3E9445"
+# go-lang configuration
+export GOPATH="$HOME/.go/lib"
 
 # nvm.sh
 export NVM_DIR="$HOME/.nvm"
+
+# Always forward the 49XXX range for Docker
+export FORWARD_DOCKER_PORTS='true'
 
 # Standard Docker configuration
 export DOCKER_IP=192.168.59.103
