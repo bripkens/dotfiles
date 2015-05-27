@@ -68,3 +68,23 @@
   'paths': [
     '/Users/ben/projects/instana/repos/ui-themes'
   ]
+'reactive-observables':
+  'title': 'reactive-observables'
+  'paths': [
+    '/Users/ben/projects/instana/repos/reactive-observables'
+  ]
+'spigo':
+  'title': 'spigo'
+  'paths': [
+    '/Users/ben/projects/spigo'
+  ]
+'layout-algo':
+  'title': 'layout-algo'
+  'paths': [
+    '/Users/ben/projects/layout-algo'
+  ]
+'processor':
+  'title': 'processor'
+  'paths': [
+    '/Users/ben/projects/instana/repos/backend/processor'
+  ]

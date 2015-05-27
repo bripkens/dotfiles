@@ -13,7 +13,7 @@
     autoIndentOnPaste: false
     invisibles:
       {}
-    fontSize: 29
+    fontSize: 25
   core:
     ignoredNames: [
       ".git"
