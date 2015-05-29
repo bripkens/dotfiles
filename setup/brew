@@ -22,14 +22,14 @@ brew install ack \
 			 autoconf \
 			 automake \
 			 bash \
-       bash-completion \
+			 bash-completion \
 			 curl \
-       fig \
+			 dock \
 			 gibo \
 			 git \
 			 ivy \
 			 leiningen \
-       macvim \
+			 macvim \
 			 maven \
 			 mercurial \
 			 ncdu \
