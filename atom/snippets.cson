@@ -60,12 +60,23 @@
     'body': """
     'use strict';
 
-    import React from 'react';
+    import React from 'react/addons';
+    import irpt from 'react-immutable-proptypes';
+
+    const rpt = React.PropTypes;
+    const block = '$1';
 
     const $1 = React.createClass({
+      mixins: [React.addons.PureRenderMixin],
+
+      propTypes: {
+        // TODO Define props
+        // foo: rpt.string.isRequired
+      },
+
       render() {
         return (
-          <div>
+          <div className={block}>
 
           </div>
         );

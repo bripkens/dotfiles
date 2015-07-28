@@ -11,9 +11,8 @@
     fontFamily: "Inconsolata"
     showIndentGuide: true
     autoIndentOnPaste: false
-    invisibles:
-      {}
-    fontSize: 25
+    invisibles: {}
+    fontSize: 23
   core:
     ignoredNames: [
       ".git"
@@ -38,17 +37,22 @@
     lintOnChange: false
     lintOnEditorFocus: false
     showErrorInline: true
+    lintOnFly: false
   jsformat:
     format_on_save: false
   "filetype-color":
     enabled: "false"
   "markdown-preview":
     liveUpdate: false
-  "white-cursor":
-    {}
+  "white-cursor": {}
   autosave:
     enabled: true
   "autocomplete-plus":
     enableAutoActivation: false
-  tabs:
-    {}
+  tabs: {}
+  "linter-eslint":
+    eslintPath: '''
+      /Users/ben/.nvm/versions/node/v0.12.6/bin/eslint
+      
+    '''
+  "merge-conflicts": {}

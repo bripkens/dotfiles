@@ -22,7 +22,7 @@ export M2_REPO="$HOME/.m2/repository"
 export JAVA_HOME=$(stat -f "%N" /Library/Java/JavaVirtualMachines/jdk1.8.*/Contents/Home/ | tail -1)
 
 # go-lang configuration
-export GOPATH="$HOME/.go/lib"
+export GOPATH="$HOME/projects/go"
 
 # nvm.sh
 export NVM_DIR="$HOME/.nvm"
@@ -34,11 +34,11 @@ export FORWARD_DOCKER_PORTS='true'
 export DOCKER_IP=192.168.59.103
 
 # For insecure setup
-export DOCKER_HOST=tcp://192.168.59.103:2375
-unset DOCKER_CERT_PATH
-unset DOCKER_TLS_VERIFY
+#export DOCKER_HOST=tcp://192.168.59.103:2375
+#unset DOCKER_CERT_PATH
+#unset DOCKER_TLS_VERIFY
 
 # For secure Docker usage
-#export DOCKER_HOST=tcp://192.168.59.103:2376
-#export DOCKER_CERT_PATH="$HOME/.boot2docker/certs/boot2docker-vm"
-#export DOCKER_TLS_VERIFY=1
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH="$HOME/.boot2docker/certs/boot2docker-vm"
+export DOCKER_TLS_VERIFY=1

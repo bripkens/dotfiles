@@ -1,90 +1,125 @@
-'ui-client':
-  'title': 'ui-client'
-  'paths': [
-    '/Users/ben/projects/instana/repos/ui-client'
+"ui-client":
+  title: "ui-client"
+  paths: [
+    "/Users/ben/projects/instana/repos/ui-client"
   ]
-'ui-map':
-  'title': 'ui-map'
-  'paths': [
-    '/Users/ben/projects/instana/repos/ui-map'
+"ui-map":
+  title: "ui-map"
+  paths: [
+    "/Users/ben/projects/instana/repos/ui-map"
   ]
-'ui-forge':
-  'title': 'ui-forge'
-  'paths': [
-    '/Users/ben/projects/instana/repos/ui-forge'
+"ui-forge":
+  title: "ui-forge"
+  paths: [
+    "/Users/ben/projects/instana/repos/ui-forge"
   ]
-'ui-sdk':
-  'title': 'ui-sdk'
-  'paths': [
-    '/Users/ben/projects/instana/repos/ui-sdk'
+"ui-sdk":
+  title: "ui-sdk"
+  paths: [
+    "/Users/ben/projects/instana/repos/ui-sdk"
   ]
-'ui-services':
-  'title': 'ui-services'
-  'paths': [
-    '/Users/ben/projects/instana/repos/ui-services'
+"ui-services":
+  title: "ui-services"
+  paths: [
+    "/Users/ben/projects/instana/repos/ui-services"
   ]
-'ui-components':
-  'title': 'ui-components'
-  'paths': [
-    '/Users/ben/projects/instana/repos/ui-components'
+"ui-components":
+  title: "ui-components"
+  paths: [
+    "/Users/ben/projects/instana/repos/ui-components"
   ]
-'ui-backend-dummy':
-  'title': 'ui-backend-dummy'
-  'paths': [
-    '/Users/ben/projects/instana/repos/ui-backend-dummy'
+"ui-backend-dummy":
+  title: "ui-backend-dummy"
+  paths: [
+    "/Users/ben/projects/instana/repos/ui-backend-dummy"
   ]
-'project-sidebar':
-  'title': 'project-sidebar'
-  'paths': [
-    '/Users/ben/projects/project-sidebar'
+"project-sidebar":
+  title: "project-sidebar"
+  paths: [
+    "/Users/ben/projects/project-sidebar"
   ]
-'instalog.js':
-  'title': 'instalog.js'
-  'paths': [
-    '/Users/ben/projects/instana/repos/instalog.js'
+"instalog.js":
+  title: "instalog.js"
+  paths: [
+    "/Users/ben/projects/instana/repos/instalog.js"
   ]
-'ui-backend':
-  'title': 'ui-backend'
-  'paths': [
-    '/Users/ben/projects/instana/repos/ui-backend'
+"ui-backend":
+  title: "ui-backend"
+  paths: [
+    "/Users/ben/projects/instana/repos/ui-backend"
   ]
-'ui-deployment':
-  'title': 'ui-deployment'
-  'paths': [
-    '/Users/ben/projects/instana/repos/ui-deployment'
+"ui-deployment":
+  title: "ui-deployment"
+  paths: [
+    "/Users/ben/projects/instana/repos/ui-deployment"
   ]
-'docs':
-  'title': 'docs'
-  'paths': [
-    '/Users/ben/projects/instana/repos/docs'
+docs:
+  title: "technical-docs"
+  paths: [
+    "/Users/ben/projects/instana/repos/docs"
   ]
-'.dotfiles':
-  'title': '.dotfiles'
-  'paths': [
-    '/Users/ben/.dotfiles'
+".dotfiles":
+  title: ".dotfiles"
+  paths: [
+    "/Users/ben/.dotfiles"
   ]
-'ui-themes':
-  'title': 'ui-themes'
-  'paths': [
-    '/Users/ben/projects/instana/repos/ui-themes'
+"ui-themes":
+  title: "ui-themes"
+  paths: [
+    "/Users/ben/projects/instana/repos/ui-themes"
   ]
-'reactive-observables':
-  'title': 'reactive-observables'
-  'paths': [
-    '/Users/ben/projects/instana/repos/reactive-observables'
+"reactive-observables":
+  title: "reactive-observables"
+  paths: [
+    "/Users/ben/projects/instana/repos/reactive-observables"
   ]
-'spigo':
-  'title': 'spigo'
-  'paths': [
-    '/Users/ben/projects/spigo'
+spigo:
+  title: "spigo"
+  paths: [
+    "/Users/ben/projects/spigo"
   ]
-'layout-algo':
-  'title': 'layout-algo'
-  'paths': [
-    '/Users/ben/projects/layout-algo'
+processor:
+  title: "processor"
+  paths: [
+    "/Users/ben/projects/instana/repos/backend/processor"
   ]
-'processor':
-  'title': 'processor'
-  'paths': [
-    '/Users/ben/projects/instana/repos/backend/processor'
+backend:
+  title: "backend"
+  paths: [
+    "/Users/ben/projects/instana/repos/backend"
+  ]
+dock:
+  title: "dock"
+  paths: [
+    "/Users/ben/projects/dock"
+  ]
+"rx-observable-generator":
+  title: "rx-observable-generator"
+  paths: [
+    "/Users/ben/projects/instana/repos/rx-observable-generator"
+  ]
+roemitter:
+  title: "roemitter"
+  paths: [
+    "/Users/ben/projects/instana/repos/roemitter"
+  ]
+"eslint-config-instana":
+  title: "eslint-config-instana"
+  paths: [
+    "/Users/ben/projects/instana/repos/eslint-config-instana"
+  ]
+"backend-simulator":
+  title: "backend-simulator"
+  paths: [
+    "/Users/ben/projects/instana/repos/backend-simulator"
+  ]
+proxrox:
+  title: "proxrox"
+  paths: [
+    "/Users/ben/projects/proxrox"
+  ]
+"tsdb.js":
+  title: "tsdb.js"
+  paths: [
+    "/Users/ben/projects/tsdb.js"
   ]
