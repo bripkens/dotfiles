@@ -1,7 +1,8 @@
 "ui-client":
   title: "ui-client"
   paths: [
-    "/Users/ben/projects/instana/repos/ui-client"
+    "/Users/ben/projects/instana/repos/ui-client",
+    "/Users/ben/projects/instana/design"
   ]
 "ui-map":
   title: "ui-map"
