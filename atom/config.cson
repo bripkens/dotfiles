@@ -12,7 +12,8 @@
     showIndentGuide: true
     autoIndentOnPaste: false
     invisibles: {}
-    fontSize: 23
+    preferredLineLength: 100
+    fontSize: 21
   core:
     ignoredNames: [
       ".git"
@@ -23,6 +24,7 @@
       "linter-jshint"
       "atom-handlebars"
       "autosave"
+      ".bin"
     ]
     projectHome: "/Users/ben/projects"
     audioBeep: false
@@ -34,7 +36,7 @@
     hideIgnoredNames: true
     showOnRightSide: true
   linter:
-    lintOnChange: false
+    lintOnChange: true
     lintOnEditorFocus: false
     showErrorInline: true
     lintOnFly: false
@@ -51,8 +53,12 @@
     enableAutoActivation: false
   tabs: {}
   "linter-eslint":
-    eslintPath: '''
-      /Users/ben/.nvm/versions/node/v0.12.6/bin/eslint
-      
-    '''
+    eslintPath: "/Users/ben/.nvm/versions/io.js/v2.5.0/bin/eslint"
   "merge-conflicts": {}
+  "atom-typescript": {}
+".source.ts.tsx":
+  editor:
+    preferredLineLength: 100
+".source.ts":
+  editor:
+    preferredLineLength: 100

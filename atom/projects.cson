@@ -1,7 +1,7 @@
 "ui-client":
   title: "ui-client"
   paths: [
-    "/Users/ben/projects/instana/repos/ui-client",
+    "/Users/ben/projects/instana/repos/ui-client"
     "/Users/ben/projects/instana/design"
   ]
 "ui-map":
@@ -123,4 +123,19 @@ proxrox:
   title: "tsdb.js"
   paths: [
     "/Users/ben/projects/tsdb.js"
+  ]
+instacharts:
+  title: "instacharts"
+  paths: [
+    "/Users/ben/projects/instana/repos/instacharts"
+  ]
+"eslint-plugin-import-order":
+  title: "eslint-plugin-import-order"
+  paths: [
+    "/Users/ben/projects/instana/repos/eslint-plugin-import-order"
+  ]
+"ui-tracker":
+  title: "ui-tracker"
+  paths: [
+    "/Users/ben/projects/instana/repos/ui-tracker"
   ]

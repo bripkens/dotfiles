@@ -19,6 +19,24 @@
     'prefix': 'bowerrc'
     'body': '{\n  "directory": "components"\n}'
 
+'.source.json':
+  'package json for simple module directories':
+    'prefix': 'comp'
+    'body': '{\n  "name": "$1",\n  "version": "0.0.0",\n  "private": true,\n  "main": "./$1.es6"\n}\n'
+
+'.source.ts':
+  'console log':
+    'prefix': 'cl'
+    'body': 'console.log($1);'
+
+  'function':
+    'prefix': 'fn'
+    'body': 'function $1($2) {\n  $3\n}'
+
+  'afunction':
+    'prefix': 'afn'
+    'body': '($1) => $2'
+
 '.source.js':
   'new ES 6 promise':
     'prefix': 'es6p'
@@ -58,7 +76,6 @@
   'new React module':
     'prefix': 'reactmod'
     'body': """
-    'use strict';
 
     import React from 'react/addons';
     import irpt from 'react-immutable-proptypes';
@@ -84,6 +101,46 @@
     });
 
     export default $1;
+    """
+
+  'React Test':
+    'prefix': 'reacttest'
+    'body': """
+/*eslint-env mocha*/
+
+import React from 'react/addons';
+import proxyquire from 'proxyquire';
+import sinon from 'sinon';
+import {expect} from 'chai';
+
+import jsdom from 'in-test/jsdom';
+
+const TestUtils = React.addons.TestUtils;
+
+describe('in-components.$1', () => {
+
+  jsdom();
+
+  let $1;
+
+  beforeEach(() => {
+    $1 = proxyquire('./$1.es6', {});
+  });
+
+  it('should...', () => {
+    const node = render({
+
+    });
+    throw new Error('TODO implement test');
+  });
+
+  function render(props) {
+    const comp = TestUtils.renderIntoDocument(
+      <$1 {...props} />
+    );
+    return React.findDOMNode(comp);
+  }
+});
     """
 
   'React PropTypes Helper':

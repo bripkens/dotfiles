@@ -18,6 +18,9 @@
   'cmd-e': 'editor:delete-line'
   'cmd-shift-b': 'tree-view:toggle'
 
+'atom-workspace':
+  'f3': 'typescript:go-to-declaration'
+
 'atom-workspace atom-text-editor:not([mini])':
   'alt-up': 'editor:move-line-up'
   'alt-down': 'editor:move-line-down'
