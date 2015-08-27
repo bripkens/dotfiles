@@ -24,8 +24,9 @@ export JAVA_HOME=$(stat -f "%N" /Library/Java/JavaVirtualMachines/jdk1.8.*/Conte
 # go-lang configuration
 export GOPATH="$HOME/projects/go"
 
-# nvm.sh
+# node and io.js
 export NVM_DIR="$HOME/.nvm"
+export NODE_REPL_HISTORY_FILE="$HOME/.node-repl-history"
 
 # Always forward the 49XXX range for Docker
 export FORWARD_DOCKER_PORTS='true'
