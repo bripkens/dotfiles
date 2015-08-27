@@ -27,6 +27,7 @@ brew install ack \
 			 dock \
 			 gibo \
 			 git \
+			 michaeldfallen/formula/git-radar \
 			 ivy \
 			 leiningen \
 			 macvim \
