@@ -35,3 +35,5 @@
 	required = true
 [branch "master"]
 	rebase = true
+[branch "develop"]
+	rebase = true
