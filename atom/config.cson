@@ -8,12 +8,13 @@
   metrics:
     userId: "705308154db7e4cf5cc5c06da0062bdd2fd4675d"
   editor:
-    fontFamily: "Inconsolata"
+    fontFamily: "Source Code Pro"
     showIndentGuide: true
     autoIndentOnPaste: false
     invisibles: {}
     preferredLineLength: 100
-    fontSize: 21
+    fontSize: 18
+    softTabs: false
   core:
     ignoredNames: [
       ".git"
@@ -56,6 +57,9 @@
     eslintPath: "/Users/ben/.nvm/versions/io.js/v2.5.0/bin/eslint"
   "merge-conflicts": {}
   "atom-typescript": {}
+  "advanced-open-file":
+    defaultInputValue: "Project root"
+    createFileInstantly: true
 ".source.ts.tsx":
   editor:
     preferredLineLength: 100

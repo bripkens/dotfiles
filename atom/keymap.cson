@@ -20,6 +20,7 @@
 
 'atom-workspace':
   'f3': 'typescript:go-to-declaration'
+  'alt-cmd-n': 'advanced-open-file:toggle'
 
 'atom-workspace atom-text-editor:not([mini])':
   'alt-up': 'editor:move-line-up'

@@ -2,7 +2,6 @@
   title: "ui-client"
   paths: [
     "/Users/ben/projects/instana/repos/ui-client"
-    "/Users/ben/projects/instana/design"
   ]
 "ui-map":
   title: "ui-map"
@@ -72,7 +71,8 @@ docs:
 "reactive-observables":
   title: "reactive-observables"
   paths: [
-    "/Users/ben/projects/instana/repos/reactive-observables"
+    "/Users/ben/projects/instana/repos/ui-client"
+    "/Users/ben/projects/instana/repos/ui-theme"
   ]
 spigo:
   title: "spigo"
@@ -138,4 +138,9 @@ instacharts:
   title: "ui-tracker"
   paths: [
     "/Users/ben/projects/instana/repos/ui-tracker"
+  ]
+"ui-theme":
+  title: "ui-theme"
+  paths: [
+    "/Users/ben/projects/instana/repos/ui-theme"
   ]

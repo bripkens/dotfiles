@@ -21,6 +21,8 @@ export M2_REPO="$HOME/.m2/repository"
 # JAVA_HOME for Oracle's JDK (avoid Java 8)
 export JAVA_HOME=$(stat -f "%N" /Library/Java/JavaVirtualMachines/jdk1.8.*/Contents/Home/ | tail -1)
 
+export SCALA_HOME="/usr/local/opt/scala/idea"
+
 # go-lang configuration
 export GOPATH="$HOME/projects/go"
 
