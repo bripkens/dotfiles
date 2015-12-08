@@ -225,7 +225,7 @@ ips () {
     done
 }
 
-alias pinghome="nmap -sn 192.168.0.1/24"
+alias pinghome="nmap -sn 192.168.178.1/24"
 alias pingwork="nmap -sn 10.10.10.0/24"
 
 macToIp () {
