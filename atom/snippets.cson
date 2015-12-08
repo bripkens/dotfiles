@@ -35,7 +35,7 @@
 
   'afunction':
     'prefix': 'afn'
-    'body': '($1) => $2'
+    'body': '$1 => $2'
 
 '.source.js':
   'new ES 6 promise':
@@ -44,11 +44,11 @@
 
   'commonJS import':
     'prefix': 'cre'
-    'body': 'var $1 = require(\'$1\');'
+    'body': 'const $1 = require(\'$1\');'
 
   'relative commonJS imports':
     'prefix': 'rel'
-    'body': 'var $1 = require(\'./$1\');'
+    'body': 'const $1 = require(\'./$1\');'
 
   'ES6 import':
     'prefix': 'imp'
