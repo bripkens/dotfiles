@@ -14,7 +14,6 @@
     invisibles: {}
     preferredLineLength: 100
     fontSize: 18
-    softTabs: false
   core:
     ignoredNames: [
       ".git"
@@ -61,6 +60,9 @@
     defaultInputValue: "Project root"
     createFileInstantly: true
 ".source.ts.tsx":
+  editor:
+    preferredLineLength: 100
+".source.tsx":
   editor:
     preferredLineLength: 100
 ".source.ts":
