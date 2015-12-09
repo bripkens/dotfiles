@@ -242,13 +242,6 @@ killtomcats() {
       xargs kill -9
 }
 
-# VirtualBox DHCP may change the IP. Use redock to
-# update the DOCKER_HOST var
-redock() {
-  export DOCKER_IP=$(boot2docker ip 2>/dev/null)
-  export DOCKER_HOST="tcp://$DOCKER_IP:2375"
-}
-
 # Open man page as PDF
 pman () { man -t "${1}" | open -f -a "Preview"; }
 
