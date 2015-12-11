@@ -23,6 +23,7 @@
   contributors = !git shortlog -s -n --no-merges
   summary = "! ~/.dotfiles/scripts/git-wtf"
   checkout-excel = "! git status --porcelain | q "select c2 from -" | grep xls | xargs git checkout"
+  cleaner = "! git clean -fd && git reset --hard"
 
 [credential]
   helper = osxkeychain
