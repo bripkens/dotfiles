@@ -13,7 +13,6 @@
     autoIndentOnPaste: false
     invisibles: {}
     preferredLineLength: 100
-    fontSize: 18
   core:
     ignoredNames: [
       ".git"
@@ -62,9 +61,9 @@
 ".source.ts.tsx":
   editor:
     preferredLineLength: 100
-".source.tsx":
+".source.ts":
   editor:
     preferredLineLength: 100
-".source.ts":
+".source.tsx":
   editor:
     preferredLineLength: 100

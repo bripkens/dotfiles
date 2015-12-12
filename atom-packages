@@ -1,12 +1,10 @@
-advanced-new-file
+advanced-open-file
 atom-soda-dark-ui
 atom-typescript
 editorconfig
 emmet
 file-icons
-filetype-color
 format-sql
-git-blame
 git-tab-status
 highlight-line
 javascript-snippets
@@ -14,9 +12,10 @@ jsformat
 jumpy
 language-clojure
 language-docker
+language-elm
 language-groovy
 language-jade
-language-jsx
+language-restructuredtext
 language-scala
 linter-csslint
 linter-eslint
@@ -31,3 +30,4 @@ sort-lines
 spacegray-dark-ui
 twilight-syntax-spacegray-ui
 twilight
+wordcount
