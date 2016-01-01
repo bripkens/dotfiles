@@ -13,6 +13,7 @@
     autoIndentOnPaste: false
     invisibles: {}
     preferredLineLength: 100
+    fontSize: 17
   core:
     ignoredNames: [
       ".git"
@@ -20,9 +21,6 @@
       ".DS_Store"
     ]
     disabledPackages: [
-      "linter-jshint"
-      "atom-handlebars"
-      "autosave"
       ".bin"
     ]
     projectHome: "/Users/ben/projects"
