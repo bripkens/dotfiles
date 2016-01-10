@@ -20,7 +20,7 @@ linkr() {
 }
 
 # Link necessary files
-for file in .{bashrc,gitconfig,hgrc,tmux.conf,vimrc,vim}; do
+for file in .{bashrc,gitconfig,hgrc,tmux.conf,vimrc,vim,pypirc}; do
   link $file $file
 done
 
