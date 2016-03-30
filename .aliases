@@ -38,8 +38,15 @@ alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && 
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
 usejava() {
-  export JAVA_HOME=`/usr/libexec/java_home -v 1.$1`
-  echo "new JAVA_HOME: $JAVA_HOME"
+  if [ $# -eq 0 ]
+  then
+    echo "JAVA_HOME: $JAVA_HOME"
+  else
+    OLD_JAVA_HOME=$JAVA_HOME
+    export JAVA_HOME=`/usr/libexec/java_home -v 1.$1`
+    echo "new JAVA_HOME: $JAVA_HOME"
+    export PATH=${PATH//$OLD_JAVA_HOME/$JAVA_HOME}
+  fi
 }
 
 # Lock the screen (when going AFK)
