@@ -3,6 +3,10 @@
   'ctrl-j': 'pane:split-down'
   'ctrl-h': 'pane:split-left'
   'ctrl-l': 'pane:split-right'
+  'ctrl-tab ^ctrl': 'unset!'
+  'ctrl-tab': 'pane:show-next-item'
+  'ctrl-shift-tab ^ctrl': 'unset!'
+  'ctrl-shift-tab': 'pane:show-previous-item'
 
 'body .native-key-bindings':
   'ctrl-tab': 'core:focus-next'

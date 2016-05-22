@@ -58,10 +58,10 @@ function __prompt_command() {
   local second_line_prompt
 
   if [ $EXIT != 0 ]; then
-    second_line_prompt="${MAGENTA}\$${RESET} "
+    second_line_prompt="\[${MAGENTA}\]\$ \[${RESET}\]"
   else
-    second_line_prompt="${RESET}\$ "
+    second_line_prompt="\$ \[${RESET}\]"
   fi
 
-  PS1="\[${BOLD}${MAGENTA}\]\u \[$WHITE\]at \[$ORANGE\]\h \[$WHITE\]in \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on\")\[$PURPLE\]\$(git-radar --bash --fetch)\n$second_line_prompt"
+  PS1="\[${BOLD}${MAGENTA}\]\u \[$WHITE\]at \[$ORANGE\]\h \[$WHITE\]in \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on\")\[$PURPLE\]\$(git-radar --bash)\n$second_line_prompt"
 }

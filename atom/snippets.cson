@@ -58,6 +58,25 @@
     'prefix': 'relimp'
     'body': 'import $1 from \'./$1\';'
 
+  'stateless React component':
+    'prefix': 'sreactcomp'
+    'body': """
+    import React from 'react';
+
+    const $1 = () => {
+      return (
+        <div>
+          Hello from $1!
+        </div>
+      );
+    };
+
+    $1.propTypes = {
+
+    };
+
+    export default $1;
+    """
 
   'new React Component':
     'prefix': 'reactcomp'
@@ -76,15 +95,16 @@
   'new React module':
     'prefix': 'reactmod'
     'body': """
-
-    import React from 'react/addons';
+    import PureRenderMixin from 'react-addons-pure-render-mixin';
     import irpt from 'react-immutable-proptypes';
+    import React from 'react';
 
-    const rpt = React.PropTypes;
     const block = '$1';
 
-    const $1 = React.createClass({
-      mixins: [React.addons.PureRenderMixin],
+    export default React.createClass({
+      displayName: '$1',
+
+      mixins: [PureRenderMixin],
 
       propTypes: {
         // TODO Define props
@@ -99,8 +119,6 @@
         );
       }
     });
-
-    export default $1;
     """
 
   'React Test':
@@ -198,6 +216,15 @@ describe('in-components.$1', () => {
     requiredAny: React.PropTypes.any.isRequired,
     */
     """
+
+  'instana events':
+    'prefix': 'inevent'
+    'body': """Immutable.fromJS({
+      'id': '$1',
+      'start': 10,
+      'end': 20,
+      'state': 'closed'
+    })"""
 
 '.text.html':
   'Google IO slide':

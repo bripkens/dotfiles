@@ -1,65 +1,71 @@
 "*":
-  "exception-reporting":
-    userId: "4b3ffdf7-2898-41a6-5bfe-0db4ef7da184"
-  "release-notes":
-    viewedVersion: "0.73.0"
-  welcome:
-    showOnStartup: false
-  metrics:
-    userId: "705308154db7e4cf5cc5c06da0062bdd2fd4675d"
-  editor:
-    fontFamily: "Source Code Pro"
-    showIndentGuide: true
-    autoIndentOnPaste: false
-    invisibles: {}
-    preferredLineLength: 100
-    fontSize: 17
+  "advanced-open-file":
+    createFileInstantly: true
+    defaultInputValue: "Project root"
+  "atom-typescript": {}
+  "autocomplete-plus":
+    enableAutoActivation: false
+  autosave:
+    enabled: true
   core:
+    audioBeep: false
+    disabledPackages: [
+      ".bin"
+      "language-restructuredtext"
+      "language-clojure"
+      "language-groovy"
+    ]
     ignoredNames: [
       ".git"
       ".svn"
       ".DS_Store"
-    ]
-    disabledPackages: [
-      ".bin"
+      "*.pyc"
     ]
     projectHome: "/Users/ben/projects"
-    audioBeep: false
     themes: [
       "atom-dark-ui"
       "twilight-syntax-spacegray-ui"
     ]
-  "tree-view":
-    hideIgnoredNames: true
-    showOnRightSide: true
+  editor:
+    autoIndentOnPaste: false
+    fontFamily: "Source Code Pro"
+    invisibles: {}
+    preferredLineLength: 100
+    showIndentGuide: true
+  "exception-reporting":
+    userId: "4b3ffdf7-2898-41a6-5bfe-0db4ef7da184"
+  "filetype-color":
+    enabled: "false"
+  jsformat:
+    format_on_save: false
   linter:
     lintOnChange: true
     lintOnEditorFocus: false
-    showErrorInline: true
     lintOnFly: false
-  jsformat:
-    format_on_save: false
-  "filetype-color":
-    enabled: "false"
-  "markdown-preview":
-    liveUpdate: false
-  "white-cursor": {}
-  autosave:
-    enabled: true
-  "autocomplete-plus":
-    enableAutoActivation: false
-  tabs: {}
+    showErrorInline: true
   "linter-eslint":
     eslintPath: "/Users/ben/.nvm/versions/io.js/v2.5.0/bin/eslint"
+  "markdown-preview":
+    liveUpdate: false
   "merge-conflicts": {}
-  "atom-typescript": {}
-  "advanced-open-file":
-    defaultInputValue: "Project root"
-    createFileInstantly: true
-".source.ts.tsx":
+  metrics:
+    userId: "705308154db7e4cf5cc5c06da0062bdd2fd4675d"
+  "release-notes":
+    viewedVersion: "0.73.0"
+  "svg-preview":
+    openPreviewAutomatically: true
+  tabs: {}
+  "tree-view":
+    hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
+    showOnRightSide: true
+  welcome:
+    showOnStartup: false
+  "white-cursor": {}
+".source.ts":
   editor:
     preferredLineLength: 100
-".source.ts":
+".source.ts.tsx":
   editor:
     preferredLineLength: 100
 ".source.tsx":
