@@ -3,7 +3,7 @@
 
 [user]
   name = Ben Ripkens
-  email = bripkens.dev@gmail.com
+  email = bripkens@gmail.com
 
 [core]
   ignorecase = false
@@ -39,3 +39,7 @@
 	rebase = true
 [branch "develop"]
 	rebase = true
+[branch "release"]
+	rebase = true
+[merge]
+	conflictstyle = diff3

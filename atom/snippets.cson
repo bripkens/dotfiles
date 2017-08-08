@@ -59,23 +59,17 @@
     'body': 'import $1 from \'./$1\';'
 
   'stateless React component':
-    'prefix': 'sreactcomp'
+    'prefix': 'fnreactcomp'
     'body': """
     import React from 'react';
 
-    const $1 = () => {
+    export default function $1() {
       return (
         <div>
           Hello from $1!
         </div>
       );
-    };
-
-    $1.propTypes = {
-
-    };
-
-    export default $1;
+    }
     """
 
   'new React Component':
@@ -240,7 +234,7 @@ describe('in-components.$1', () => {
       </slide>
     """
 
-'.source.ini':
+'.source.editorconfig':
   'sample editorconfig file':
     'prefix': 'editorconfig'
     'body': """
