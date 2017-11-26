@@ -1,7 +1,7 @@
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.dotfiles/.{exports,aliases,bash_prompt,private}; do
+for file in ~/backup/dotfiles/.{exports,aliases,bash_prompt,private}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
@@ -36,10 +36,10 @@ complete -W "NSGlobalDomain" defaults
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall
 
 # If possible, add tab completion for many more commands
-[ -f /usr/local/etc/bash_completion ] && source /usr/local/etc/bash_completion
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 # Auto completion for directory and file names
 bind 'TAB:menu-complete'
 
 # Add more completions
-source $HOME/.dotfiles/completions/*.completion.bash
+source $HOME/backup/dotfiles/completions/*.completion.bash

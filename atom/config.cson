@@ -13,6 +13,7 @@
   "clipboard-plus": {}
   core:
     audioBeep: false
+    closeDeletedFileTabs: true
     disabledPackages: [
       ".bin"
       "language-restructuredtext"
@@ -27,12 +28,14 @@
     projectHome: "/Users/ben/projects"
     telemetryConsent: "limited"
     themes: [
-      "atom-dark-ui"
-      "twilight-syntax-spacegray-ui"
+      "pristine-ui"
+      "one-dark-syntax"
     ]
+    titleBar: "hidden"
   editor:
     autoIndentOnPaste: false
     fontFamily: "Fira Code"
+    fontSize: 13
     invisibles: {}
     preferredLineLength: 120
     showIndentGuide: true
@@ -62,7 +65,9 @@
     prettierOptions:
       printWidth: 120
       singleQuote: true
-      tabWidth: "2"
+      tabWidth: 2
+  "pristine-ui":
+    tabSizing: "Minimum"
   "release-notes":
     viewedVersion: "0.73.0"
   "svg-preview":

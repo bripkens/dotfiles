@@ -4,7 +4,7 @@ git submodule init
 git submodule update
 
 link() {
-  from="$HOME/.dotfiles/$1"
+  from="$HOME/backup/dotfiles/$1"
   to="$HOME/$2"
   echo "New symlink $to -> $from"
   rm -f $to
@@ -13,14 +13,14 @@ link() {
 
 linkr() {
   mkdir -p $HOME/.$1
-  files=`ls $HOME/.dotfiles/$1`
+  files=`ls $HOME/backup/dotfiles/$1`
   for file in $files; do
     link $1/$file .$1/$file
   done
 }
 
 # Link necessary files
-for file in .{bashrc,gitconfig,hgrc,tmux.conf,vimrc,vim,pypirc}; do
+for file in .{bashrc,gitconfig,hgrc,tmux.conf,vimrc,vim,pypirc,tmuxinator}; do
   link $file $file
 done
 

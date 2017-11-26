@@ -1,0 +1,19 @@
+# ~/.tmuxinator/instana.yml
+
+name: instana
+root: ~/projects/instana/repos
+
+windows:
+  - frontend:
+      layout: even-horizontal
+      root: ~/projects/instana/repos/ui-client
+      panes:
+        - cd ui-client
+        - cd ui-client
+
+  - backend:
+      layout: even-horizontal
+      root: ~/projects/instana/repos/backend
+      panes:
+        - cd backend
+
