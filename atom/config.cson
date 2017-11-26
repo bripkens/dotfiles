@@ -5,89 +5,48 @@
   "atom-css-unit-converter":
     comments: false
     leadingZero: false
-  "atom-typescript": {}
-  "autocomplete-plus":
-    enableAutoActivation: false
-  autosave:
-    enabled: true
-  "clipboard-plus": {}
   core:
     audioBeep: false
     closeDeletedFileTabs: true
-    disabledPackages: [
-      ".bin"
-      "language-restructuredtext"
-      "language-clojure"
-    ]
-    ignoredNames: [
-      ".git"
-      ".svn"
-      ".DS_Store"
-      "*.pyc"
-    ]
-    projectHome: "/Users/ben/projects"
-    telemetryConsent: "limited"
+    telemetryConsent: "no"
     themes: [
       "pristine-ui"
       "one-dark-syntax"
     ]
     titleBar: "hidden"
+    warnOnLargeFileLimit: 4
   editor:
     autoIndentOnPaste: false
     fontFamily: "Fira Code"
     fontSize: 13
-    invisibles: {}
     preferredLineLength: 120
     showIndentGuide: true
   "exception-reporting":
-    userId: "4b3ffdf7-2898-41a6-5bfe-0db4ef7da184"
-  "filetype-color":
-    enabled: "false"
+    userId: "20c1b373-4a8d-4198-848f-a3051bafbe9a"
   jsformat:
     format_on_save: false
   linter:
-    lintOnChange: true
-    lintOnEditorFocus: false
-  "linter-eslint":
-    eslintPath: "/Users/ben/.nvm/versions/io.js/v2.5.0/bin/eslint"
+    lintOnChange: false
   "linter-js-standard":
     checkStyleDevDependencies: true
   "linter-ui-default":
     panelHeight: 81
-    showPanel: true
-  "markdown-preview":
-    liveUpdate: false
-  "merge-conflicts": {}
-  metrics:
-    userId: "705308154db7e4cf5cc5c06da0062bdd2fd4675d"
   "prettier-atom":
-    formatOnSaveOptions: {}
     prettierOptions:
       printWidth: 120
       singleQuote: true
       tabWidth: 2
   "pristine-ui":
     tabSizing: "Minimum"
-  "release-notes":
-    viewedVersion: "0.73.0"
   "svg-preview":
     openPreviewAutomatically: true
-  tabs: {}
+  tabs:
+    enableVcsColoring: true
   "tree-view":
     hideIgnoredNames: true
-    showOnRightSide: true
   welcome:
     showOnStartup: false
-  "white-cursor": {}
-".editorconfig.source":
-  editor:
-    preferredLineLength: 120
-".source.ts":
-  editor:
-    preferredLineLength: 100
-".source.ts.tsx":
-  editor:
-    preferredLineLength: 100
-".source.tsx":
-  editor:
-    preferredLineLength: 100
+  zentabs:
+    maximumOpenedTabs: 20
+    neverCloseDirty: true
+    neverCloseUnsaved: true

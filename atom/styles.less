@@ -1,67 +1,7 @@
-/*
- * Your Stylesheet
- *
- * This stylesheet is loaded when Atom starts up and is reloaded automatically
- * when it is changed.
- *
- * If you are unfamiliar with LESS, you can read more about it here:
- * http://www.lesscss.org
- */
-
-
-@editor-background-color: #141414;
-
-.item-views {
-  background: @editor-background-color;
-}
-
-atom-text-editor {
-  background-color: @editor-background-color !important;
-}
-
-atom-text-editor.editor {
-  background-color: @editor-background-color !important;
-
-  .lines {
-    background-color: @editor-background-color !important;
-  }
-
-  .wrap-guide, .ecfg-wrap-guide {
-    background-color: red;
-    opacity: 0.8;
-  }
-}
-
-.markdown-preview atom-text-editor.editor {
-  color: #555;
-}
-
-atom-text-editor.markdown, atom-text-editor.markdown.editor {
-  .scroll-view {
-    max-width: 44em;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .wrap-guide, .line-numbers {
-    display: none !important;
-  }
-}
-
-atom-text-editor.editor {
-
-  .cursor {
-    border-color: white;
-    border-width: 2px;
-  }
-
-  .gutter {
-    background-color: lighten(@editor-background-color, 3%);
-  }
-
-  .selection .region {
-    background: #555;
-    border-radius: 3px;
+.editor {
+  .wrap-guide {
+    background-color: red !important;
+    opacity: 0.8 !important;
   }
 
   .bracket-matcher {
@@ -71,7 +11,7 @@ atom-text-editor.editor {
   }
 
   .line.highlight-line {
-    background-color: rgba(255, 255, 255, 0.1) !important;
+    background-color: rgba(255, 255, 255, 0.09) !important;
   }
 
   .hard-tab.leading-whitespace {
@@ -80,25 +20,222 @@ atom-text-editor.editor {
   }
 }
 
-.list-group li:not(.list-nested-item).status-ignored,
-.list-tree li:not(.list-nested-item).status-ignored,
-.list-group li.list-nested-item.status-ignored > .list-item,
-.list-tree li.list-nested-item.status-ignored > .list-item {
-  color: #888;
+// ####################################################
+// In minimum mode of the UI theme, there is too little
+// space around the tab titles. This is not configurable
+// in the theme, so we set it manually.
+// ####################################################
+.tab-bar .tab .title, .tab-bar .tab.active .title {
+  padding: 0 24px;
 }
 
-.list-group li:not(.list-nested-item).status-ignored:hover,
-.list-tree li:not(.list-nested-item).status-ignored:hover,
-.list-group li.list-nested-item.status-ignored > .list-item:hover,
-.list-tree li.list-nested-item.status-ignored > .list-item:hover {
-  color: #fff;
-}
-
-autocomplete-suggestion-list.select-list.popover-list ol.list-group li {
-  line-height: 1.2;
-  font-size: 0.8em;
-}
-
+// ####################################################
+// Improve visibility of the selected item in the tree view
+// ####################################################
 .tree-view .selected:before {
-  background: #5b6e8f;
+  background: #5b6e8f !important;
+  opacity: 0.6;
+}
+
+// ####################################################
+// Improve visibility of the selected editor tab
+// ####################################################
+.tab-bar .tab.active[data-type$="Editor"], .tab-bar .tab.active[data-type$="AboutView"], .tab-bar .tab.active[data-type$="TimecopView"], .tab-bar .tab.active[data-type$="StyleguideView"], .tab-bar .tab.active[data-type="MarkdownPreviewView"] {
+    background-color: hsla(218, 22%, 46%, .6);
+}
+
+// ####################################################
+// disable slow full screen modal transitions
+// ####################################################
+atom-panel.modal:after {
+  -webkit-animation: none;
+}
+
+// ####################################################
+// Increase max width for modals
+// ####################################################
+atom-panel.modal {
+  max-width: 800px;
+}
+
+// ####################################################
+// Start adapted twilight gray syntax theme
+// ####################################################
+.editor .wrap-guide {
+  background-color: #ffffff;
+  opacity: 0.05;
+}
+.editor,
+.editor .gutter,
+atom-text-editor,
+atom-text-editor .gutter {
+  background: #21252b;
+  color: #F8F8F8;
+}
+.editor.is-focused .cursor,
+atom-text-editor .cursor {
+  border-color: #A7A7A7;
+}
+.editor.is-focused .selection .region,
+atom-text-editor .selection .region {
+  background-color: rgba(221, 240, 255, 0.2);
+}
+.editor.is-focused .line-number.cursor-line-no-selection,
+.editor.is-focused .line.cursor-line,
+atom-text-editor .line-number.cursor-line-no-selection,
+atom-text-editor .line.cursor-line {
+  background-color: rgba(166, 148, 66, 0);
+}
+.syntax--comment {
+  font-style: italic;
+  color: #5F5A60 !important;
+}
+.syntax--constant {
+  color: #CF6A4C !important;
+}
+.syntax--entity {
+  color: #9B703F !important;
+}
+.syntax--keyword {
+  color: #CDA869 !important;
+}
+.syntax--storage {
+  color: #F9EE98 !important;
+}
+.syntax--string {
+  color: #8F9D6A !important;
+}
+.syntax--support {
+  color: #9B859D !important;
+}
+.syntax--variable {
+  color: #7587A6 !important;
+}
+.syntax--invalid.syntax--deprecated {
+  font-style: italic;
+  text-decoration: underline;
+  color: #D2A8A1;
+}
+.syntax--invalid.syntax--illegal {
+  color: #F8F8F8;
+  background-color: rgba(86, 45, 86, 0.75);
+}
+.syntax--text .syntax--source {
+  background-color: rgba(176, 179, 186, 0.08);
+}
+.syntax--text.syntax--html.syntax--ruby .syntax--source {
+  background-color: rgba(177, 179, 186, 0.13);
+}
+.syntax--entity.syntax--other.syntax--inherited-class {
+  font-style: italic;
+  color: #9B5C2E;
+}
+.syntax--string .syntax--source {
+  color: #DAEFA3;
+}
+.syntax--string .syntax--constant {
+  color: #DDF2A4;
+}
+.syntax--string.syntax--regexp {
+  color: #E9C062;
+}
+.syntax--string.syntax--regexp .syntax--constant.syntax--character.syntax--escape,
+.syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded,
+.syntax--string.syntax--regexp .syntax--string.syntax--regexp.syntax--arbitrary-repitition {
+  color: #CF7D34;
+}
+.syntax--string .syntax--variable {
+  color: #8A9A95;
+}
+.syntax--support.syntax--function {
+  color: #DAD085;
+}
+.syntax--support.syntax--constant {
+  color: #CF6A4C;
+}
+.syntax--meta.syntax--preprocessor.syntax--c {
+  color: #8996A8;
+}
+.syntax--meta.syntax--preprocessor.syntax--c .syntax--keyword {
+  color: #AFC4DB;
+}
+.syntax--meta.syntax--tag.syntax--sgml.syntax--doctype,
+.syntax--meta.syntax--tag.syntax--sgml.syntax--doctype .syntax--entity,
+.syntax--meta.syntax--tag.syntax--sgml.syntax--doctype .syntax--string,
+.syntax--meta.syntax--tag.syntax--preprocessor.syntax--xml,
+.syntax--meta.syntax--tag.syntax--preprocessor.syntax--xml .syntax--entity,
+.syntax--meta.syntax--tag.syntax--preprocessor.syntax--xml .syntax--string {
+  color: #494949;
+}
+.syntax--declaration.syntax--tag,
+.syntax--declaration.syntax--tag .syntax--entity,
+.syntax--meta.syntax--tag,
+.syntax--meta.syntax--tag .syntax--entity {
+  color: #AC885B;
+}
+.syntax--declaration.syntax--tag.syntax--inline,
+.syntax--declaration.syntax--tag.syntax--inline .syntax--entity,
+.syntax--source .syntax--entity.syntax--name.syntax--tag,
+.syntax--source .syntax--entity.syntax--other.syntax--attribute-name,
+.syntax--meta.syntax--tag.syntax--inline,
+.syntax--meta.syntax--tag.syntax--inline .syntax--entity {
+  color: #E0C589;
+}
+.syntax--meta.syntax--selector.syntax--css .syntax--entity.syntax--name.syntax--tag {
+  color: #CDA869;
+}
+.syntax--meta.syntax--selector.syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--tag.syntax--pseudo-class {
+  color: #8F9D6A;
+}
+.syntax--meta.syntax--selector.syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
+  color: #8B98AB;
+}
+.syntax--meta.syntax--selector.syntax--css .syntax--entity.syntax--other.syntax--attribute-name.syntax--class {
+  color: #9B703F;
+}
+.syntax--support.syntax--type.syntax--property-name.syntax--css {
+  color: #C5AF75;
+}
+.syntax--meta.syntax--property-group .syntax--support.syntax--constant.syntax--property-value.syntax--css,
+.syntax--meta.syntax--property-value .syntax--support.syntax--constant.syntax--property-value.syntax--css {
+  color: #F9EE98;
+}
+.syntax--meta.syntax--preprocessor.syntax--at-rule .syntax--keyword.syntax--control.syntax--at-rule {
+  color: #8693A5;
+}
+.syntax--meta.syntax--property-value .syntax--support.syntax--constant.syntax--named-color.syntax--css,
+.syntax--meta.syntax--property-value .syntax--constant {
+  color: #CA7840;
+}
+.syntax--meta.syntax--constructor.syntax--argument.syntax--css {
+  color: #8F9D6A;
+}
+.syntax--meta.syntax--diff,
+.syntax--meta.syntax--diff.syntax--header,
+.syntax--meta.syntax--separator {
+  font-style: italic;
+  color: #F8F8F8;
+  background-color: #0E2231;
+}
+.syntax--meta.syntax--embedded.syntax--line,
+.syntax--meta.syntax--embedded.syntax--line .syntax--string {
+  color: #DAEFA3;
+}
+.syntax--markup.syntax--deleted {
+  color: #F8F8F8;
+  background-color: #420E09;
+}
+.syntax--markup.syntax--changed {
+  color: #F8F8F8;
+  background-color: #4A410D;
+}
+.syntax--markup.syntax--inserted {
+  color: #F8F8F8;
+  background-color: #253B22;
+}
+.syntax--markup.syntax--list {
+  color: #F9EE98;
+}
+.syntax--markup.syntax--heading {
+  color: #CF6A4C;
 }

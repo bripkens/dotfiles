@@ -3,6 +3,7 @@
 .vim/.netrwhist
 .private
 npm-debug.log
+atom/github.cson
 
 ### https://raw.github.com/github/gitignore/master/Global/OSX.gitignore
 

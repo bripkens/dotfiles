@@ -48,3 +48,6 @@
 
 '.platform-linux atom-text-editor:not([mini])':
   'ctrl-shift-v': 'clipboard-plus:toggle'
+
+'.workspace, .editor':
+  'cmd-g': 'github:toggle-git-tab'
