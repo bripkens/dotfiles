@@ -8,8 +8,8 @@
 [core]
   ignorecase = false
   # Use custom `.gitignore` and `.gitattributes`
-  excludesfile = ~/.dotfiles/.gitignore
-  attributesfile = ~/.dotfiles/.gitattributes
+  excludesfile = ~/backup/dotfiles/.gitignore
+  attributesfile = ~/backup/dotfiles/.gitattributes
   # Treat spaces before tabs, lines that are indented with 8 or more spaces, and
   # all kinds of trailing whitespace as an error.
   # [default] trailing-space: looks for spaces at the end of a line
@@ -32,19 +32,21 @@
 [push]
   default = matching
 [filter "media"]
-	clean = git media clean %f
-	smudge = git media smudge %f
-	required = true
+  clean = git media clean %f
+  smudge = git media smudge %f
+  required = true
 [branch "master"]
-	rebase = true
+  rebase = true
 [branch "develop"]
-	rebase = true
+  rebase = true
 [branch "release"]
-	rebase = true
+  rebase = true
 [merge]
-	conflictstyle = diff3
+  conflictstyle = diff3
+[fetch]
+  prune = true
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true

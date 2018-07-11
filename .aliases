@@ -37,6 +37,8 @@ alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && kil
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
+alias bullshit="docker run -it --rm svenstaro/genact"
+
 weather() {
   curl "http://wttr.in/$1"
 }
@@ -61,6 +63,22 @@ usejava() {
     else echo "Java 1.$1 is not available! JAVA_HOME: $JAVA_HOME"
     fi
   fi
+}
+
+tunnel() {
+  echo "Host?"
+  read host
+  echo
+
+  echo "User?"
+  read user
+  echo
+
+  echo "Port?"
+  read port
+  echo
+
+  ssh -Nf -L $port:localhost:$port $user@$host
 }
 
 # Lock the screen (when going AFK)
@@ -202,6 +220,7 @@ alias gitpo='git push origin $(getCurrentGitBranch) --tags'
 alias gitpu='git push upstream $(getCurrentGitBranch) --tags'
 alias gitpoll='git pull origin $(getCurrentGitBranch)'
 alias gitpull='git pull upstream $(getCurrentGitBranch)'
+alias gitprune='git fetch origin && git remote prune origin && git branch -r | awk '"'"'{print $1}'"'"' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '"'"'{print $1}'"'"' | xargs git branch -d'
 
 # SSH aliases
 alias ctv='ssh bripkens.de -p 46812'
@@ -275,10 +294,10 @@ svg2png() { qlmanage -t -s 1000 -o . "${1}"; }
 write-atom-packages() {
   ls -ad $HOME/.atom/packages/*/ | \
     sed -E 's/^.*\/(.*)\/$/\1/' > \
-    $HOME/.dotfiles/atom-packages
-  git -C $HOME/.dotfiles status
+    $HOME/backup/dotfiles/atom-packages
+  git -C $HOME/backup/dotfiles status
   echo
-  echo "Wrote new package info to ~/.dotfiles. Remember to commit the dotfiles"
+  echo "Wrote new package info to ~/backup/dotfiles. Remember to commit the dotfiles"
 }
 
 restore-atom-packages() {

@@ -43,3 +43,8 @@ bind 'TAB:menu-complete'
 
 # Add more completions
 source $HOME/backup/dotfiles/completions/*.completion.bash
+
+# Increase file limits
+# https://gist.github.com/tombigel/d503800a282fcadbee14b537735d202c
+ulimit -n 200000
+ulimit -u 2048

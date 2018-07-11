@@ -9,6 +9,9 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # google cloud tools
 export PATH="$PATH:/opt/gce/google-cloud-sdk/bin"
 
+# jmeter
+export PATH="$PATH:/Users/ben/Applications/apache-jmeter-4.0/bin"
+
 # SBT JVM-Options
 export SBT_OPTS="-XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:PermSize=256M -XX:MaxPermSize=512M"
 

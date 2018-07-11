@@ -8,6 +8,13 @@
   core:
     audioBeep: false
     closeDeletedFileTabs: true
+    customFileTypes:
+      "source.css.less": [
+        "mless"
+      ]
+    disabledPackages: [
+      "autocomplete-modules"
+    ]
     telemetryConsent: "no"
     themes: [
       "pristine-ui"
@@ -18,7 +25,7 @@
   editor:
     autoIndentOnPaste: false
     fontFamily: "Fira Code"
-    fontSize: 13
+    fontSize: 16
     preferredLineLength: 120
     showIndentGuide: true
   "exception-reporting":
@@ -27,10 +34,13 @@
     format_on_save: false
   linter:
     lintOnChange: false
+  "linter-flow":
+    executablePath: "/usr/local/bin/flow"
   "linter-js-standard":
     checkStyleDevDependencies: true
   "linter-ui-default":
     panelHeight: 81
+    showPanel: true
   "prettier-atom":
     prettierOptions:
       printWidth: 120

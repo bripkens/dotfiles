@@ -22,6 +22,9 @@
   'cmd-e': 'editor:delete-line'
   'cmd-shift-b': 'tree-view:toggle'
 
+'.tree-view':
+  'cmd-r': 'tree-view:move'
+
 'atom-workspace':
   'f3': 'typescript:go-to-declaration'
   'alt-cmd-n': 'advanced-open-file:toggle'

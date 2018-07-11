@@ -4,6 +4,7 @@
 .private
 npm-debug.log
 atom/github.cson
+.vscode
 
 ### https://raw.github.com/github/gitignore/master/Global/OSX.gitignore
 
