@@ -68,5 +68,5 @@ function __prompt_command() {
     second_line_prompt="\$ \[${RESET}\]"
   fi
 
-  PS1="\[${BOLD}${MAGENTA}\]\u \[$WHITE\]at \[$ORANGE\]\h \[$WHITE\]in \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on\")\[$PURPLE\]\$(git-radar --bash)\n$second_line_prompt"
+  PS1="\[${BOLD}${MAGENTA}\]\u \[$WHITE\]in \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on\")\[$PURPLE\]\$(git-radar --bash)\n$second_line_prompt"
 }

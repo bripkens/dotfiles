@@ -39,7 +39,7 @@
   "linter-js-standard":
     checkStyleDevDependencies: true
   "linter-ui-default":
-    panelHeight: 81
+    panelHeight: 127
     showPanel: true
   "prettier-atom":
     prettierOptions:
