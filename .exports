@@ -28,3 +28,7 @@ export SCALA_HOME="/usr/local/opt/scala/idea"
 # node and io.js
 export NVM_DIR="$HOME/.nvm"
 export NODE_REPL_HISTORY_FILE="$HOME/.node-repl-history"
+
+# GPG support
+# see https://help.github.com/articles/telling-git-about-your-gpg-key/
+export GPG_TTY=$(tty)

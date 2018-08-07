@@ -4,6 +4,7 @@
 [user]
   name = Ben Ripkens
   email = bripkens@gmail.com
+  signingkey = A505473483C7788F
 
 [core]
   ignorecase = false
@@ -50,3 +51,5 @@
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
   required = true
+[commit]
+  gpgsign = true
