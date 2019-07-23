@@ -14,6 +14,7 @@
       ]
     disabledPackages: [
       "autocomplete-modules"
+      "svg-preview"
     ]
     telemetryConsent: "no"
     themes: [
@@ -25,7 +26,6 @@
   editor:
     autoIndentOnPaste: false
     fontFamily: "Fira Code"
-    fontSize: 17
     preferredLineLength: 120
     showIndentGuide: true
   "exception-reporting":
@@ -39,7 +39,8 @@
   "linter-js-standard":
     checkStyleDevDependencies: true
   "linter-ui-default":
-    panelHeight: 127
+    panelHeight: 81
+    showPanel: true
   "prettier-atom":
     prettierOptions:
       printWidth: 120

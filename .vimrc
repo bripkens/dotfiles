@@ -67,7 +67,7 @@ set autoread
 set ruler
 
 " Display tabs and trailing spaces visually
-set list listchars=tab:\ \ ,trail:·
+" set list listchars=tab:\ \ ,trail:·
 
 " use different background color after 80 chars
 " http://stackoverflow.com/questions/235439/vim-80-column-layout-concerns

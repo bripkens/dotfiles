@@ -32,3 +32,5 @@ export NODE_REPL_HISTORY_FILE="$HOME/.node-repl-history"
 # GPG support
 # see https://help.github.com/articles/telling-git-about-your-gpg-key/
 export GPG_TTY=$(tty)
+
+export LANG="en_US.UTF-8"

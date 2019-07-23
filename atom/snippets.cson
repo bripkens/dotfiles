@@ -7,7 +7,7 @@
 '.source.json':
   'package json for simple module directories':
     'prefix': 'comp'
-    'body': '{\n  "name": "$1",\n  "version": "0.0.0",\n  "private": true,\n  "main": "./$1.es6"\n}\n'
+    'body': '{\n  "name": "$1",\n  "version": "0.0.0",\n  "private": true,\n  "main": "./$1.js"\n}\n'
 
 '.source.ts':
   'console log':
@@ -39,20 +39,20 @@
     'prefix': 'imp'
     'body': 'import $1 from \'$1\';'
 
-  'ES6 import':
+  'relative ES6 import':
     'prefix': 'relimp'
     'body': 'import $1 from \'./$1\';'
 
   'stateless React component':
     'prefix': 'fnreactcomp'
     'body': """
-    import React from 'react';
+    import React, { Fragment } from 'react';
 
     export default function $1() {
       return (
-        <div>
+        <Fragment>
           Hello from $1!
-        </div>
+        </Fragment>
       );
     }
     """
