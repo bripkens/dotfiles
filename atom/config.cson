@@ -26,6 +26,7 @@
   editor:
     autoIndentOnPaste: false
     fontFamily: "Fira Code"
+    fontSize: 20
     preferredLineLength: 120
     showIndentGuide: true
   "exception-reporting":
@@ -39,8 +40,7 @@
   "linter-js-standard":
     checkStyleDevDependencies: true
   "linter-ui-default":
-    panelHeight: 81
-    showPanel: true
+    panelHeight: 127
   "prettier-atom":
     prettierOptions:
       printWidth: 120

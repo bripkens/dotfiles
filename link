@@ -7,15 +7,15 @@ link() {
   from="$HOME/backup/dotfiles/$1"
   to="$HOME/$2"
   echo "New symlink $to -> $from"
-  rm -f $to
-  ln -s $from $to
+  rm -f "$to"
+  ln -s "$from" "$to"
 }
 
 linkr() {
-  mkdir -p $HOME/.$1
-  files=`ls $HOME/backup/dotfiles/$1`
+  mkdir -p "$HOME/.$1"
+  files=`ls "$HOME/backup/dotfiles/$1"`
   for file in $files; do
-    link $1/$file .$1/$file
+    link "$1/$file" ".$1/$file"
   done
 }
 
@@ -25,6 +25,11 @@ for file in .{bashrc,gitconfig,hgrc,tmux.conf,vimrc,vim,pypirc,tmuxinator}; do
 done
 
 link ".bashrc" ".bash_profile"
+mkdir -p "$HOME/.nvm"
+link "nvm-default-packages" ".nvm/default-packages"
+
+link "code/settings.json" "Library/Application Support/Code/User/settings.json"
+link "code/keybindings.json" "Library/Application Support/Code/User/keybindings.json"
 
 linkr atom
 linkr lein

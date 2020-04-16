@@ -1,0 +1,65 @@
+{
+    "atomKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": false,
+    "editor.fontFamily": "\"Fira Code\", Menlo, Monaco, 'Courier New', monospace",
+    "editor.tabSize": 2,
+    "editor.fontWeight": "normal",
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "none",
+    "workbench.activityBar.visible": true,
+    "editor.matchBrackets": false,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true,
+        "suppressWelcomeNotice": true
+    },
+    "workbench.colorTheme": "Twilight",
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.scrollBeyondLastLine": false,
+    "editor.fontLigatures": true,
+    "editor.rulers": [
+        120
+    ],
+    "explorer.confirmDragAndDrop": false,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/node_modules": true,
+    },
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "typescript": "jsx",
+        "typescriptreact": "jsx"
+    },
+    "files.associations": {
+        "*.mless": "less"
+    },
+    "files.autoSave": "onFocusChange",
+    "window.zoomLevel": 1,
+    "editor.snippetSuggestions": "top",
+    "explorer.autoReveal": false,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.enabled": false,
+    "gitlens.keymap": "none",
+    "macros": {
+        "openSidebarAndFocus": [
+            "workbench.files.action.showActiveFileInExplorer",
+            "workbench.action.focusSideBar"
+        ]
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontSize": 15,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "explorer.confirmDelete": false,
+    "sort-imports.on-save": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}

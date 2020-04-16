@@ -46,13 +46,13 @@
   'stateless React component':
     'prefix': 'fnreactcomp'
     'body': """
-    import React, { Fragment } from 'react';
+    import React from 'react';
 
     export default function $1() {
       return (
-        <Fragment>
+        <>
           Hello from $1!
-        </Fragment>
+        </>
       );
     }
     """

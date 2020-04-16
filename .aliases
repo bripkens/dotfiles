@@ -49,7 +49,7 @@ usejava() {
     echo "JAVA_HOME: $JAVA_HOME"
   else
     OLD_JAVA_HOME=$JAVA_HOME
-    if [[ $1 < 9 ]]
+    if [ "$1" -lt "9" ]
     then
       NEW_JAVA_HOME=`/usr/libexec/java_home -v 1.$1`
     else
@@ -84,121 +84,6 @@ tunnel() {
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
-# set the terminal title
-function termTitle {
-  echo -ne "\033]0;"$*"\007"
-}
-
-# mvn aliases
-function mvninit() {
-  if [[ -z "$1" ]]; then
-    read -p "Artifact name: " artifact
-  else
-    artifact=$1
-  fi
-
-  echo "Making sure you are running Java 8..."
-  usejava 8
-
-  echo "Bootstrapping $artifact using the Maven archetype system..."
-
-  mvn archetype:generate \
-    --batch-mode \
-    --quiet \
-    -DarchetypeGroupId=de.bripkens \
-    -DarchetypeArtifactId=java-quickstart \
-    -DgroupId=de.bripkens \
-    -Dversion=0.1.0-SNAPSHOT \
-    -Dpackage="de.bripkens" \
-    -DartifactId=$artifact
-
-  echo "  Bootstrap successful!"
-
-  echo "Running initial build..."
-  cd $artifact
-  mvn --quiet install
-  mvn --quiet clean #get rid of target directory
-
-  echo "  Initial build successful!"
-  echo "Created files and directories:"
-  tree -a .
-}
-
-# svn aliases
-alias svni='svn propset svn:ignore -F "/.svnignore" -R .'
-alias svnc='svn commit -m'
-alias svns='svn status'
-alias svna='svn add'
-alias svnan='svn add -N'
-alias svnu='svn update'
-alias svnd='svn delete'
-
-# hg aliases
-alias hgc='hg commit -m'
-alias hgs='hg status'
-alias hga='hg add'
-alias hgau='hg addremove'
-
-# An easier way to find multiple heads in a branch
-alias hgh='hg heads --template "{branch}|{rev}:{node|short}|{date|age}|{author|person}\n" | \
-           sort | \
-           column -t -s "|"'
-
-hghp() {
-  format='{branch}|{rev}:{node|short}|{date|age}|{author|person}\n'
-  heads=`hg heads --template $format`
-  echo "$heads" | node ~/.dotfiles/scripts/mercurial-heads.js
-}
-
-# Copy the name of the current branch to the clipboard
-alias hgb="hg branch | \
-           tr -d '\n' | \
-           pbcopy && \
-           hg branch"
-
-# Show all branches in a more readable way
-alias hgbs="hg branches | \
-            column -t | \
-            sort"
-
-# Same as hgbs, but additionally shows closed branches
-alias hgbsc="hg branches -c | \
-             column -t | \
-             sort"
-
-# Copy branch/changeset information to the clipboard.
-# Useful when referring to commits
-alias hglc="hg log -l 1 | \
-            grep -1 changeset | \
-            pbcopy"
-
-# See what I have worked on the last few days
-hgla() {
-  hg log --no-merges \
-         --date ${1:-yesterday} \
-         --template "{date(date, '%a %d.%m.%Y')} on {branch} \n {desc} \n\n" \
-         --user "Ben Ripkens" \
-         | less
-}
-
-hglac() {
-  d=${1:-yesterday}
-  hg log --no-merges \
-         --date $d \
-         --template "{desc}\n" \
-         --user "Ben Ripkens" \
-         | pbcopy
-  echo "Work log for $d copied to clipboard"
-}
-
-# Close current branch and switch to development main line
-hgclose() {
-  branch="$(hg branch)"
-  hg commit -m "Closing branch $branch" --close-branch
-  hg update develop
-  echo "Switched to develop after closing branch $branch"
-}
-
 getCurrentGitBranch() {
   git branch --no-color 2> /dev/null | sed -e "/^[^*]/d" -e "s/* \(.*\)/\1/"
 }
@@ -221,30 +106,13 @@ alias gitpu='git push upstream $(getCurrentGitBranch) --tags'
 alias gitpoll='git pull origin $(getCurrentGitBranch)'
 alias gitpull='git pull upstream $(getCurrentGitBranch)'
 alias gitprune='git fetch origin && git remote prune origin && git branch -r | awk '"'"'{print $1}'"'"' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '"'"'{print $1}'"'"' | xargs git branch -d'
+alias gitbranches="git for-each-ref --sort='-authordate:iso8601' --format=' %(color:green)%(authordate:iso8601)%09%(color:white)%(refname:short)' refs/heads"
 
 # SSH aliases
 alias ctv='ssh bripkens.de -p 46812'
 
-# Sublime Text
-alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-
-# ICIS+
-alias hsql="$ICISPLUS_REPO/parent/StartAndInitHSQL.bash"
-alias icisplus="cd $ICISPLUS_REPO"
-alias checkz4="ping 172.19.2.24"
-copywidgets() {
-    rm -rf $ICISPLUS_REPO/web/src/main/webapp/VAADIN/widgetsets/*
-    cp -r $ICISPLUS_REPO/vaadin.widgetset/target/widgetsets/* \
-          $ICISPLUS_REPO/web/src/main/webapp/VAADIN/widgetsets/
-    rm -rf $ICISPLUS_REPO/web/src/main/webapp/VAADIN/widgetsets/WEB-INF
-}
-
-# HuGO
-alias hugo="cd $HUGO_REPO"
-
 # Dev tools
 alias server="open http://localhost:8000/ && python -m SimpleHTTPServer"
-alias canaryunsafe="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --disable-web-security"
 
 # Show the IP addresses of this machine, with each interface that the address is on.
 ips () {
@@ -265,21 +133,8 @@ ips () {
     done
 }
 
-alias pinghome="nmap -sn 192.168.178.1/24"
-alias pingwork="nmap -sn 10.10.10.0/24"
-
 macToIp () {
   arp -a | grep "$1" -i | awk '{print($2)}' | sed -E -e 's/\(|\)//g'
-}
-
-alias conraspi='ssh `macToIp "B8:27:EB:CD:82:95"` -l pi'
-
-killtomcats() {
-    ps ax | \
-      grep tomcat | \
-      grep -v grep | \
-      awk '{ print $1 }' | \
-      xargs kill -9
 }
 
 # Open man page as PDF
