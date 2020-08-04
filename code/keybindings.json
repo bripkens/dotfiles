@@ -85,14 +85,13 @@
     "command": "-workbench.view.explorer"
   },
   {
-    "key": "shift+cmd+e",
-    "command": "editor.emmet.action.expandAbbreviation",
-    "when": "config.emmet.triggerExpansionOnTab && editorTextFocus && !editorReadonly && !editorTabMovesFocus"
-  },
-  {
     "key": "tab",
     "command": "-editor.emmet.action.expandAbbreviation",
     "when": "config.emmet.triggerExpansionOnTab && editorTextFocus && !editorReadonly && !editorTabMovesFocus"
+  },
+  {
+    "key": "shift+cmd+e",
+    "command": "editor.emmet.action.expandAbbreviation"
   },
   {
     "key": "cmd+k r",
@@ -164,5 +163,37 @@
     "key": "ctrl+shift+g",
     "command": "-workbench.view.scm",
     "when": "gitlens:enabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "extension.pxToremAndRemToPx"
+  },
+  {
+    "key": "alt+z",
+    "command": "-extension.pxToremAndRemToPx"
+  },
+  {
+    "key": "cmd+c",
+    "command": "-editor.action.clipboardCopyAction",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+cmd+v",
+    "command": "multiclip.list"
+  },
+  {
+    "key": "shift+cmd+v",
+    "command": "-markdown.showPreview",
+    "when": "editorLangId == 'markdown'"
+  },
+  {
+    "key": "shift+cmd+v",
+    "command": "-multiclip.paste",
+    "when": "editorTextFocus && editorLangId != 'markdown'"
+  },
+  {
+    "key": "delete",
+    "command": "moveFileToTrash",
+    "when": "filesExplorerFocus && !inputFocus"
   }
 ]

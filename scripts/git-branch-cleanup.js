@@ -7,6 +7,7 @@ const {spawnSync} = require('child_process');
 
 const branchesToKeep = [
   /^master$/,
+  /^main$/,
   /^develop$/,
   /^release-\d+$/
 ];

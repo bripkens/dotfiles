@@ -41,6 +41,7 @@
     checkStyleDevDependencies: true
   "linter-ui-default":
     panelHeight: 127
+    showPanel: true
   "prettier-atom":
     prettierOptions:
       printWidth: 120

@@ -40,10 +40,14 @@
   rebase = true
 [branch "develop"]
   rebase = true
+[branch "main"]
+  rebase = true
 [branch "release"]
   rebase = true
-[branch "release-*"]
-  rebase = true
+# Wildcard branch matching is not supported in [branch] blocks, so we have to leverage includeIf:
+# https://git-scm.com/docs/git-config#_includes
+[includeIf "onbranch:release-*"]
+  path = ~/backup/dotfiles/.git-release-branch
 [merge]
   conflictstyle = diff3
 [fetch]

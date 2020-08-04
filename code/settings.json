@@ -1,5 +1,7 @@
 {
     "atomKeymap.promptV3Features": true,
+    "workbench.editor.enablePreview": false,
+    "workbench.list.openMode": "doubleClick",
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.formatOnPaste": false,
     "editor.fontFamily": "\"Fira Code\", Menlo, Monaco, 'Courier New', monospace",
@@ -8,6 +10,7 @@
     "editor.minimap.enabled": false,
     "editor.renderWhitespace": "none",
     "workbench.activityBar.visible": true,
+    "explorer.openEditors.visible": 0,
     "editor.matchBrackets": false,
     "gitlens.codeLens.enabled": false,
     "gitlens.advanced.messages": {
@@ -36,9 +39,9 @@
         "typescriptreact": "jsx"
     },
     "files.associations": {
-        "*.mless": "less"
+        "*.mless": "less",
+        "*.js.snap": "javascript"
     },
-    "files.autoSave": "onFocusChange",
     "window.zoomLevel": 1,
     "editor.snippetSuggestions": "top",
     "explorer.autoReveal": false,
@@ -60,6 +63,15 @@
     "explorer.confirmDelete": false,
     "sort-imports.on-save": false,
     "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
 }
