@@ -34,3 +34,6 @@
 [submodule ".vim/bundle/ultisnips"]
 	path = .vim/bundle/ultisnips
 	url = git@github.com:SirVer/ultisnips.git
+[submodule "git-radar"]
+	path = git-radar
+	url = https://github.com/michaeldfallen/git-radar.git

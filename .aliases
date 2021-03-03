@@ -29,14 +29,6 @@ export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40
 
 alias grep="ag"
 
-# Show/hide hidden files in Finder
-alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
-alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
-
-# Hide/show all desktop icons (useful when presenting)
-alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
-alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
-
 alias bullshit="docker run -it --rm svenstaro/genact"
 
 weather() {
@@ -81,8 +73,6 @@ tunnel() {
   ssh -Nf -L $port:localhost:$port $user@$host
 }
 
-# Lock the screen (when going AFK)
-alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
 getCurrentGitBranch() {
   git branch --no-color 2> /dev/null | sed -e "/^[^*]/d" -e "s/* \(.*\)/\1/"
@@ -91,6 +81,8 @@ getCurrentGitBranch() {
 #git aliases
 alias gitco='git checkout'
 alias gitc='git commit -m'
+alias gitca='git commit --amend'
+alias gitcan='git commit --amend --no-edit'
 alias gits='git status'
 alias gita='git add'
 alias gitau='git add --all . && git add -u :/ && echo "Added all changes" && git status'
@@ -107,9 +99,6 @@ alias gitpoll='git pull origin $(getCurrentGitBranch)'
 alias gitpull='git pull upstream $(getCurrentGitBranch)'
 alias gitprune='git fetch origin && git remote prune origin && git branch -r | awk '"'"'{print $1}'"'"' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '"'"'{print $1}'"'"' | xargs git branch -d'
 alias gitbranches="git for-each-ref --sort='-authordate:iso8601' --format=' %(color:green)%(authordate:iso8601)%09%(color:white)%(refname:short)' refs/heads"
-
-# SSH aliases
-alias ctv='ssh bripkens.de -p 46812'
 
 # Dev tools
 alias server="open http://localhost:8000/ && python -m SimpleHTTPServer"
@@ -135,34 +124,4 @@ ips () {
 
 macToIp () {
   arp -a | grep "$1" -i | awk '{print($2)}' | sed -E -e 's/\(|\)//g'
-}
-
-# Open man page as PDF
-pman () { man -t "${1}" | open -f -a "Preview"; }
-
-# Show the location of a linked program
-ref() { ls -la $(which "${1}"); }
-
-# Convert an SVG file to a PNG file
-svg2png() { qlmanage -t -s 1000 -o . "${1}"; }
-
-write-atom-packages() {
-  ls -ad $HOME/.atom/packages/*/ | \
-    sed -E 's/^.*\/(.*)\/$/\1/' > \
-    $HOME/backup/dotfiles/atom-packages
-  git -C $HOME/backup/dotfiles status
-  echo
-  echo "Wrote new package info to ~/backup/dotfiles. Remember to commit the dotfiles"
-}
-
-restore-atom-packages() {
-  cat $HOME/.dotfiles/atom-packages | xargs apm install
-}
-
-# redo previous command with sudo
-alias fuck='sudo $(history -p \!\!)'
-
-# By default I don't want to have all the Android development tools on my path
-useandroid() {
-  export PATH=${PATH}:/Applications/Android\ Studio.app/sdk/platform-tools:/Applications/Android\ Studio.app/sdk/tools
 }

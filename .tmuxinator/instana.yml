@@ -4,16 +4,20 @@ name: instana
 root: ~/projects/instana/repos
 
 windows:
-  - frontend:
+  - ui-client:
       layout: even-horizontal
-      root: ~/projects/instana/repos/ui-client
       panes:
         - cd ui-client
         - cd ui-client
+  
+  - ui-foundation:
+      layout: even-horizontal
+      panes:
+        - cd ui-foundation
+        - cd ui-foundation
 
   - backend:
       layout: even-horizontal
-      root: ~/projects/instana/repos/backend
       panes:
         - cd backend
 

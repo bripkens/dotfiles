@@ -73,5 +73,12 @@
     },
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "go.formatTool": "goimports",
+    "liveshare.presence": true,
+    "javascript.updateImportsOnFileMove.enabled": "never",
+    "extensions.ignoreRecommendations": false,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
 }
